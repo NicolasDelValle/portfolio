@@ -5,24 +5,33 @@ import "./App.css";
 
 function App() {
   const container = createRef();
-  const { bind, unbind } = createScrollSnap(container, {
-    snapDestinationX: "0%",
-    snapDestinationY: "90%",
-    timeout: 100,
-    duration: 300,
-    threshold: 0.2,
-    snapStop: false,
-  });
-  bind();
+
+  useEffect(() => {
+    if (!container.current) {
+      return;
+    }
+
+    const { bind, unbind } = createScrollSnap(
+      container.current,
+      {
+        snapDestinationY: "100%",
+        timeout: 1,
+        duration: 300,
+        snapStop: true,
+      },
+      () => console.log("snapped")
+    );
+  }, [container.current]);
 
   return (
     <div className="App">
-      <div className="SnapScrollingContainer" ref={container}>
-        <div className="page bg-primary ">
-          <span>seccion titulo</span>
+      <div id="container" ref={container}>
+        <div className="page bg-danger">
+          <div>I</div>
+          <div className="hint">scroll down</div>
         </div>
-        <div className="page bg-success">
-          <span>seccion portfolio</span>
+        <div className="page bg-primary">
+          <div>II</div>
         </div>
       </div>
     </div>
