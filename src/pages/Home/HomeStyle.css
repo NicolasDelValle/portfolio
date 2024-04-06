@@ -1,0 +1,13 @@
+body{
+  background-color: #d6d5d4;
+}
+
+.imageContainer{
+  background-color: blue;
+  display: flex;
+}
+
+.nicoImg{
+  background-color: aquamarine;
+
+}
