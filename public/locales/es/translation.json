@@ -1,0 +1,31 @@
+{
+  "navBar": {
+    "home": "Inicio",
+    "me": "Yo",
+    "projects":"Proyectos",
+    "contact":"Contacto"
+  },
+  "meSection":{
+    "hi, i'm":"hola, soy",
+    "full stack web developer":"desarrollador web full stack",
+    "and":"y",
+    "learner":"aprendiz",
+    "a few things I can help you with":"algunas cosas en las que puedo ayudarte",
+    "if your needs are not on that list we can talk about it, i am":"si tus necesidades no están en esa lista podemos hablarlo, soy",
+    "flexible":"flexible",
+    "download cv":"descargar cv"
+  },
+  "projectsSection":{
+    "projects i have learned from":"proyectos en los que he aprendido",
+    "work in progress...":"trabajo en curso...",
+    "projects":{
+      "losi":{
+        "desc":"proyecto creado como trabajo final del Coding Bootcamp de Hack Academy, en la edicion de Enero de 2022."
+      }
+    }
+  },
+  "contactSection":{
+    "so,":"Entonces, ¿",
+    "can i help you":"puedo ayudarte"
+  }
+}
