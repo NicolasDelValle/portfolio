@@ -11,7 +11,7 @@
     "and":"y",
     "learner":"aprendiz",
     "a few things I can help you with":"algunas cosas en las que puedo ayudarte",
-    "if your needs are not on that list we can talk about it, i am":"si tus necesidades no están en esa lista podemos hablarlo, soy",
+    "if your needs are not on that list we can talk about it, i am":"si tus necesidades no estan en esa lista podemos hablarlo, soy",
     "flexible":"flexible",
     "download cv":"descargar cv"
   },
@@ -25,7 +25,9 @@
     }
   },
   "contactSection":{
-    "so,":"Entonces, ¿",
-    "can i help you":"puedo ayudarte"
+    "so,":"Entonces, ",
+    "can i help you":"puedo ayudarte",
+    "copied text":"Texto copiado"
+    
   }
 }

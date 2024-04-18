@@ -1,9 +1,9 @@
 {
   "navBar": {
-    "home": "home",
-    "me": "me",
-    "projects":"projects",
-    "contact":"contact"
+    "home": "Home",
+    "me": "Me",
+    "projects":"Projects",
+    "contact":"Contact"
   },
   "meSection":{
     "hi, i'm":"hi, i'm",
@@ -26,6 +26,7 @@
   },
   "contactSection":{
     "so,":"so,",
-    "can i help you":"can i help you"
+    "can i help you":"can i help you",
+    "copied text":"Copied text"
   }
 }
