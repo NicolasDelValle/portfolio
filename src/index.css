@@ -1,13 +1,72 @@
+@font-face {
+  font-family: koulen;
+  src: url(../public/koulen.ttf);
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: koulen;
+  color: #0d1117;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.default-shadow {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.bg-main-black {
+  background-color: #0d1117;
+}
+
+.bg-main-white {
+  background-color: #f5f9ff;
+}
+
+.bg-main-white-2 {
+  background-color: #f7efe5;
+}
+
+.bg-main-color {
+  background-color: #7743db;
+}
+
+.bg-main-color-analogous-1 {
+  background-color: #be39d8;
+}
+
+.bg-main-color-2 {
+  background-color: #7e4edc;
+}
+
+.bg-main-color-3 {
+  background-color: #c3acd0;
+}
+
+.bg-main-color-complementary {
+  background-color: #a7db43;
+}
+
+.bg-main-attention-color {
+  background-color: #f8e559;
+}
+
+.font-main-black {
+  color: #0d1117;
+}
+
+.font-main-white {
+  color: #f5f9ff;
+}
+
+.font-main-color {
+  color: #7743db;
+}
+
+.font-main-attention-color {
+  color: #f8e559;
 }
