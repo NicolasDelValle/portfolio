@@ -1,7 +1,7 @@
 import "./SectionStyle.css";
 
-function Section({ children }) {
-  return <>{children}</>;
+function Section({ children, backgroundColor = "" }) {
+  return <div className={`section ${backgroundColor}`}>{children}</div>;
 }
 
 export default Section;

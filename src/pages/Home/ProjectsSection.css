@@ -1,0 +1,39 @@
+.motion-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+}
+
+.motion-item {
+}
+
+.wip-block {
+  background: #c3acd0;
+  background: -webkit-linear-gradient(0deg, #c3acd0 0%, #e5edf7 100%);
+  background: linear-gradient(0deg, #c3acd0 0%, #e5edf7 100%);
+  border-radius: 10px;
+  width: 100%;
+  min-width: 5em;
+  min-height: 5em;
+  padding: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.wip-block-text {
+  font-size: 2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 100%;
+}
+
+.card-container {
+  min-width: 200px;
+  min-height: 200px;
+  margin: 8px;
+  border-radius: 10px;
+}
