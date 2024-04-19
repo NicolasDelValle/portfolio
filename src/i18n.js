@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 
 i18n.use(Backend).use(initReactI18next).init({
   fallbackLng: "en",
-  debug: true,
+  debug: false,
 });
 
 export default i18n;

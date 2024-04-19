@@ -24,7 +24,7 @@
   transition: 0.3s;
   height: 100%;
   box-sizing: border-box;
-  border-width: 3px;
+  border-width: 0px;
   border-color: rgba(0, 0, 0, 0.281);
   border-style: dashed;
   padding-top: 117px;
