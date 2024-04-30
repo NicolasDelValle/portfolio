@@ -1,28 +1,25 @@
 import { useRef, useEffect, useState, useMemo } from "react";
+import { useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { motion } from "framer-motion";
-
 import "./HomeStyle.css";
 import "./ProjectsSection.css";
+import "./DecoStyle.css";
 
 import Section from "../../components/Secation/Section";
 import NavBar from "../../components/NavBar/NavBar";
 import Toast from "../../components/Toast/Toast";
 
-import mainWhite2Rectangle from "../../assets/main-white-2-rectangle.svg";
 import downloadArrow from "../../assets/download-arrow.svg";
 import copyIcon from "../../assets/copy-icon.svg";
 import externalLinkIcon from "../../assets/external-link-icon.svg";
 import nicolas from "../../assets/Nicolas.png";
 import nicolsaWhiteBorder from "../../assets/NicolasWhiteBorder.png";
 
-/* import losiDesktopImg1 from "../../assets/project-images/losi/losi-desktop.png";
-import losiDesktopImg2 from "../../assets/project-images/losi/losi-desktop-2.png"; */
-import losiDesktopImg3 from "../../assets/project-images/losi/losi-desktop-3.png";
+import losiLogo from "../../assets/project-images/losi/losi-logo.png";
 
 import bootstrapIcon from "../../assets/tech-icons/bootstrap.svg";
 import css3Icon from "../../assets/tech-icons/css3.svg";
@@ -31,6 +28,7 @@ import html5Icon from "../../assets/tech-icons/html5.svg";
 import reactIcon from "../../assets/tech-icons/react.svg";
 import sequelizeIcon from "../../assets/tech-icons/sequelize.svg";
 import vueIcon from "../../assets/tech-icons/vue.svg";
+import reduxIcon from "../../assets/tech-icons/redux.svg";
 
 import igIcon from "../../assets/contact-icons/ig-icon.svg";
 import linkedinIcon from "../../assets/contact-icons/linkedin-icon.svg";
@@ -39,14 +37,15 @@ import telephomeIcon from "../../assets/contact-icons/telephone-icon.svg";
 import ubicationIcon from "../../assets/contact-icons/ubication-icon.svg";
 
 import scrollWhite from "../../assets/Scroll-Down-white.svg";
-import moveIcon from "../../assets/move-icon.svg";
+import scrollPurple from "../../assets/Scroll-Down-purple.svg";
 
 function Home() {
   const homeRef = useRef(null);
   const meRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-  const constraintsRef = useRef(null);
+
+  const homeRefIsInView = useInView(homeRef, { once: true });
 
   const [home, setHome] = useState(false);
   const [me, setMe] = useState(false);
@@ -159,7 +158,7 @@ function Home() {
         icon: expressIcon,
         alt: "known technology: Express.js",
         name: "Express.JS",
-        iconOnly: true,
+        iconOnly: false,
       },
       {
         icon: reactIcon,
@@ -183,6 +182,12 @@ function Home() {
         icon: vueIcon,
         alt: "known technology: Vue.js",
         name: "Vue.JS",
+        iconOnly: false,
+      },
+      {
+        icon: reduxIcon,
+        alt: "known technology: Redux",
+        name: "Redux",
         iconOnly: false,
       },
     ],
@@ -254,22 +259,47 @@ function Home() {
     [home, me, projects, contact]
   );
 
+  const tabeIndexThenProjects = 29;
+
   return (
     <>
       <NavBar navigation={navigation} />
       <div className="sections-container ">
         <Section>
-          <div id="home" className="home-name-container" ref={homeRef}>
-            <span className="home-name default-shadow z-i-0 ticker2">
+          <div
+            tabIndex={11}
+            id="home"
+            className="home-name-container"
+            ref={homeRef}
+          >
+            <span
+              style={{
+                opacity: homeRefIsInView ? 1 : 0,
+                transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+              }}
+              className="home-name default-shadow z-i-0 ticker2"
+            >
               NICOLAS - NICOLAS - NICOLAS - NICOLAS - NICOLAS - NICOLAS -
               NICOLAS - NICOLAS - NICOLAS - NICOLAS - NICOLAS - NICOLAS -
             </span>
             <img
+              style={{
+                transform: homeRefIsInView ? "none" : "translateY(200px)",
+                opacity: homeRefIsInView ? 1 : 0,
+                transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+              }}
               className="nico-img default-shadow z-i-1"
               src={nicolas}
               alt=""
             />
-            <span className="home-name default-shadow z-i-2 ticker1">
+
+            <span
+              style={{
+                opacity: homeRefIsInView ? 1 : 0,
+                transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+              }}
+              className="home-name default-shadow z-i-2 ticker1"
+            >
               DEL VALLE - DEL VALLE - DEL VALLE - DEL VALLE - DEL VALLE - DEL
               VALLE - DEL VALLE - DEL VALLE - DEL VALLE - DEL VALLE - DEL VALLE
               - DEL VALLE -
@@ -277,9 +307,15 @@ function Home() {
             <img className="scroll-down-img z-i-2" src={scrollWhite} alt="" />
           </div>
         </Section>
+
         <Section backgroundColor="bg-main-color">
           <>
-            <div className="content-container" ref={meRef}>
+            <div
+              tabIndex={12}
+              id="me"
+              className="content-container"
+              ref={meRef}
+            >
               <div className="content font-main-white">
                 <div className="me-section-card-container default-shadow">
                   <img
@@ -291,17 +327,17 @@ function Home() {
                   <div className="me-section-card-text-container">
                     <div className="me-section-name-text">
                       <span>{t("meSection.hi, i'm")}</span>
-                      <h1 tabIndex={11} className="font-main-attention-color">
+                      <h1 tabIndex={13} className="font-main-attention-color">
                         Nicolas Del Valle
                       </h1>
                     </div>
-                    <span tabIndex={12} className="me-section-line-2">
+                    <span tabIndex={14} className="me-section-line-2">
                       {t("meSection.full stack web developer")}
                     </span>
                     <div className="me-section-lerner-text">
                       <span>{t("meSection.and")}</span>
                       <span
-                        tabIndex={13}
+                        tabIndex={15}
                         className="font-main-attention-color me-section-p-l-5"
                       >
                         {t("meSection.learner")}
@@ -311,7 +347,7 @@ function Home() {
                 </div>
 
                 <span
-                  tabIndex={14}
+                  tabIndex={16}
                   className="me-section-tech-text default-shadow"
                   ref={meRef}
                 >
@@ -321,7 +357,6 @@ function Home() {
                 <div className="me-section-slider-container ">
                   <div className="me-section-slider-container-front" />
                   <Slider
-                    key="juan"
                     className="me-section-slider-item-container"
                     {...meSectionSliderSettings}
                   >
@@ -330,6 +365,7 @@ function Home() {
                 </div>
 
                 <span
+                  tabIndex={17}
                   className="me-section-then-tech-text default-shadow"
                   ref={meRef}
                 >
@@ -342,6 +378,7 @@ function Home() {
                 </span>
 
                 <a
+                  tabIndex={18}
                   href="./CV - Nicolás Del Valle - 2024.pdf"
                   download="Nicolas Del Valle - CV.pdf"
                   className="me-section-download-cv default-shadow"
@@ -360,90 +397,141 @@ function Home() {
             </div>
           </>
         </Section>
+
         <Section>
-          <div id="projects" className="content-container" ref={projectsRef}>
-            <div className="content">
-              <motion.div
-                className="motion-container bg-main-white-2"
-                ref={constraintsRef}
-              >
-                <motion.div
-                  className="motion-item"
-                  drag
-                  dragConstraints={constraintsRef}
+          <>
+            <div
+              tabIndex={19}
+              id="projects"
+              className="content-container"
+              ref={projectsRef}
+            >
+              <div className="content project-section">
+                <div
+                  tabIndex={20}
+                  className="project-section-title font-main-color"
                 >
-                  <div className="project-section-title bg-main-white">
-                    {t("projectsSection.projects i have learned from")}
-                    <img src={moveIcon} alt="" />
-                  </div>
-                  <div className="default-shadow card-container bg-main-white project-losi">
-                    <div>
-                      {/* <img
-                        className="project-image"
-                        src={losiDesktopImg1}
-                        alt=""
-                      /> */}
-                      <img
-                        className="project-image"
-                        src={losiDesktopImg3}
-                        alt=""
-                      />
+                  {t("projectsSection.projects i have learned from")}
+                </div>
+                <div className="project-section-card-container">
+                  <a
+                    tabIndex={21}
+                    className="card default-shadow"
+                    style={{ backgroundColor: "#000" }}
+                    href="https://losi.vercel.app/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <img
+                      className="card-banner-image"
+                      src={losiLogo}
+                      alt="LOSI e-commerce"
+                    />
 
-                      {/* <img
-                        className="project-image"
-                        src={losiDesktopImg2}
-                        alt=""
-                      /> */}
+                    <div className="card-body font-main-white">
+                      <span tabIndex={22} className="card-date">
+                        22/03/22 - 28/03/22
+                      </span>
+                      <span tabIndex={23} className="card-title">
+                        LOSI E-Commerce{" "}
+                      </span>
+                      <span tabIndex={24} className="card-description">
+                        {t("projectsSection.projects.losi.desc")}
+                      </span>
+                      <div className="card-body-bottom-conainer">
+                        <span className="card-tech-text">
+                          {t("projectsSection.tech")}
+                        </span>
+                        <div className="card-tech">
+                          <ul className="tech-list">
+                            <li className="tech-item">
+                              <img
+                                tabIndex={25}
+                                className="project-item-tech-image default-shadow"
+                                src={reactIcon}
+                                alt="React.js"
+                                title="React.Js"
+                              />
+                            </li>
+                            <li className="tech-item">
+                              <img
+                                tabIndex={26}
+                                className="project-item-tech-image default-shadow"
+                                src={bootstrapIcon}
+                                alt="Bootstrap"
+                                title="Bootstrap"
+                              />
+                            </li>
+                            <li className="tech-item">
+                              <img
+                                tabIndex={27}
+                                className="project-item-tech-image default-shadow"
+                                src={sequelizeIcon}
+                                alt="Sequelize"
+                                title="Sequelize"
+                              />
+                            </li>
+                            <li className="tech-item">
+                              <img
+                                tabIndex={28}
+                                className="project-item-tech-image default-shadow"
+                                src={expressIcon}
+                                alt="Express.js"
+                                title="Express.Js"
+                              />
+                            </li>
+                            <li className="tech-item">
+                              <img
+                                tabIndex={29}
+                                className="project-item-tech-image default-shadow"
+                                src={reduxIcon}
+                                alt="Redux"
+                                title="Redux"
+                              />
+                            </li>
+                          </ul>
+                          <img
+                            className="card-link-img"
+                            src={externalLinkIcon}
+                            alt=""
+                          />
+                        </div>
+                      </div>
                     </div>
-
-                    <div className="bg-main-color font-main-white">
-                      losi e-commerce
-                    </div>
-                    <a
-                      href="https://losi.vercel.app/"
-                      className="bg-main-color "
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <img src={externalLinkIcon} alt="" />
-                      <span className="font-main-white">losi.vercel.app</span>
-                    </a>
-                    <div className="bg-main-color font-main-white">
-                      {t("projectsSection.projects.losi.desc")}
-                    </div>
-                    <div className="bg-main-color font-main-white">
-                      React - Bootstrap - Sequelize - Redux - JWT - Express
-                    </div>
-                  </div>
-
-                  <div className="default-shadow wip-block">
-                    <span className="wip-block-text font-main-white">
-                      {t("projectsSection.work in progress...")}
-                    </span>
-                  </div>
-                  <div className="default-shadow wip-block-2">
-                    <span className="wip-block-text font-main-white">
-                      {t("projectsSection.work in progress...")}
-                    </span>
-                  </div>
-                </motion.div>
-              </motion.div>
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
+            <div className="me-section-scroll-container">
+              <img
+                className="scroll-down-img z-i-2"
+                src={scrollPurple}
+                alt=""
+              />
+            </div>
+          </>
         </Section>
+
         <Section backgroundColor="bg-main-color">
-          <img
-            src={mainWhite2Rectangle}
-            alt=""
-            className="decorative-rectengle default-shadow"
-          />
-          <div id="contact" className="content-container" ref={contactRef}>
+          <div
+            tabIndex={tabeIndexThenProjects + 1}
+            id="contact"
+            className="content-container"
+            ref={contactRef}
+          >
             <div className="content font-main-white">
+              <div className="contact-section-deco" />
               <div className="contact-section-info-container">
                 <div className="contact-section-title-container">
-                  <span className="contact-section-title default-shadow">
+                  <span
+                    tabIndex={tabeIndexThenProjects + 2}
+                    className="contact-section-title default-shadow"
+                  >
                     {t("contactSection.so,")}
-                    <span className="font-main-attention-color me-section-p-l-5">
+                    <span
+                      tabIndex={tabeIndexThenProjects + 3}
+                      className="font-main-attention-color me-section-p-l-5"
+                    >
                       {t("contactSection.can i help you")}
                     </span>
                     ?
@@ -455,7 +543,10 @@ function Home() {
                     src={ubicationIcon}
                     alt=""
                   />
-                  <span className="contact-section-item-text">
+                  <span
+                    tabIndex={tabeIndexThenProjects + 4}
+                    className="contact-section-item-text"
+                  >
                     Montevideo, Uruguay
                   </span>
                 </div>
@@ -466,12 +557,20 @@ function Home() {
                     src={mailIcon}
                     alt=""
                   />
-                  <span className="contact-section-item-text contact-section-item-link">
-                    contact@nicolasdelvalle.dev
-                  </span>
-
+                  <a
+                    tabIndex={tabeIndexThenProjects + 5}
+                    title="contact@nicolasdelvalle.dev"
+                    href="mailto:contact@nicolasdelvalle.dev"
+                    rel="noreferrer"
+                  >
+                    <span className="contact-section-item-text contact-section-item-link contact-section-item-link-underline">
+                      contact@nicolasdelvalle.dev
+                    </span>
+                  </a>
                   <button
-                    className="contact-section-copy-button bg-main-color-2  default-shadow"
+                    tabIndex={tabeIndexThenProjects + 6}
+                    title="Copy Email"
+                    className="contact-section-copy-button bg-main-color-analogous-1   default-shadow"
                     onClick={HandleCopyEmail}
                   >
                     <img src={copyIcon} alt="" />
@@ -483,7 +582,10 @@ function Home() {
                     src={telephomeIcon}
                     alt=""
                   />
-                  <span className="contact-section-item-text">
+                  <span
+                    tabIndex={tabeIndexThenProjects + 6}
+                    className="contact-section-item-text"
+                  >
                     +598 97 688 183
                   </span>
                 </div>
@@ -494,6 +596,8 @@ function Home() {
                     alt=""
                   />
                   <a
+                    tabIndex={tabeIndexThenProjects + 7}
+                    title="Linkedin"
                     className="contact-section-item-text contact-section-item-link font-main-white"
                     rel="noreferrer"
                     href="https://www.linkedin.com/in/nico-del-valle-dev/"
@@ -513,6 +617,8 @@ function Home() {
                   />
 
                   <a
+                    tabIndex={tabeIndexThenProjects + 8}
+                    title="Instagram"
                     className="contact-section-item-text contact-section-item-link font-main-white"
                     rel="noreferrer"
                     target="_blank"

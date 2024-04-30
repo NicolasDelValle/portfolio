@@ -33,24 +33,26 @@ function NavBar({ navigation }) {
     <nav className="navBar-container">
       <div className="navBar-content">
         <div
-          className={`navBar bg-main-white default-shadow ${
-            menuOpen ? "j-c-center" : ""
-          }`}
+          className={`navBar default-shadow ${menuOpen ? "j-c-center" : ""}
+          
+            
+              bg-main-white
+          `}
         >
           <img
             onClick={() => action(sections.home.ref)}
-            className={`${menuOpen ? "responsive-2" : ""}`}
+            className={`${menuOpen ? "responsive-2" : ""} `}
             src={nicoDev}
             alt="Portfolio - Nicolas del valle"
             tabIndex={1}
           />
-          <div className="menu-container" title="Menu">
+          <div className={`menu-container `} title="Menu">
             <button
               onClick={() => handleMenu()}
               className={`menu-element p-l-5 responsive-1`}
               tabIndex={2}
             >
-              {menuOpen ? "_" : "web_dev"}
+              <span>{menuOpen ? ">_" : "<_"}</span>
             </button>
             <label className="responsive-2">web_dev</label>
             <label className={`${menuOpen ? "menu-size-scaling" : ""} `}>
@@ -62,7 +64,7 @@ function NavBar({ navigation }) {
                 menuOpen ? "responsive-2" : ""
               }`}
             >
-              ...
+              . . .
             </button>
             <button
               onClick={() => action(sections.home.ref)}
@@ -81,7 +83,7 @@ function NavBar({ navigation }) {
               tabIndex={4}
               className={`menu-element ${
                 menuOpen ? "menu-size-scaling" : "menu-option"
-              } ${sections.me.state ? "active-menu-element" : ""} p-l-5`}
+              } ${sections.me.state ? "active-menu-element" : ""}  p-l-5`}
             >
               {t("navBar.me")}
             </button>
@@ -142,7 +144,7 @@ function NavBar({ navigation }) {
             <button
               className={`menu-element ${
                 menuOpen ? "menu-size-scaling" : "menu-option"
-              } p-l-5 responsive-3 ${es ? "active-menu-element" : ""}`}
+              } p-l-5 responsive-3 `}
               onClick={() => changeLanguage("es")}
               tabIndex={8}
             >
@@ -195,7 +197,7 @@ function NavBar({ navigation }) {
             <label className="p-l-5">]</label>
             <label className="p-l-5">)</label>
           </div>
-          <div className="menu-container leng-menu" title="Lenguaje">
+          <div className={`menu-container leng-menu`} title="Lenguaje">
             <label>leng(</label>
             <button
               className={`menu-element p-l-5 ${
