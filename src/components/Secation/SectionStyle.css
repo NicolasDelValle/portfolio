@@ -6,5 +6,5 @@
   align-items: flex-start;
   scroll-snap-align: center;
   position: relative;
- 
-  }
+  overflow: hidden;
+}

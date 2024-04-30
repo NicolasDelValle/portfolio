@@ -32,6 +32,7 @@
   justify-content: flex-start;
   flex-direction: column;
   align-items: stretch;
+  position: relative;
 }
 
 .decorative-rectengle {
@@ -57,6 +58,13 @@
   justify-content: flex-end;
   align-items: center;
   container-type: inline-size;
+  position: relative;
+  background: rgb(167, 219, 67);
+  background: radial-gradient(
+    circle,
+    rgba(167, 219, 67, 1) 10%,
+    rgba(0, 212, 255, 0) 35%
+  );
 }
 
 .m-b-117 {
@@ -122,6 +130,7 @@
 }
 
 .me-section-card-container {
+  z-index: 3;
   transition: 0.3s;
   display: flex;
   align-items: center;
@@ -202,12 +211,14 @@
 }
 
 .me-section-tech-text {
+  z-index: 3;
   margin: 24px auto 0px;
   line-height: 100%;
   font-size: 5cqh;
 }
 
 .me-section-then-tech-text {
+  z-index: 3;
   margin: 24px;
   line-height: 100%;
   font-size: 3cqw;
@@ -288,6 +299,11 @@
   background-color: #c3acd0;
 }
 
+.me-section-download-cv:focus {
+  transition: 0.3s;
+  background-color: #c3acd0;
+}
+
 .me-section-download-arrow {
   margin-right: 4px;
 }
@@ -297,9 +313,23 @@
 }
 
 .contact-section-info-container {
-  margin: auto;
+  z-index: 3;
+  margin: 117px auto;
 }
+.contact-section-deco {
+  background: rgb(190, 57, 216);
+  background: radial-gradient(
+    circle,
+    rgba(190, 57, 216, 1) 50%,
+    rgba(0, 212, 255, 0) 70%
+  );
+  filter: blur(100px);
+  border-radius: 360px;
+  width: 100%;
+  height: 100%;
 
+  position: absolute;
+}
 .contact-section-title {
   transition: 0.3s;
   font-size: 3.5em;
@@ -323,24 +353,26 @@
   transition: 0.3s;
   font-size: 2.5em;
   line-height: 90%;
-  margin-left: 5px;
+  margin-left: 8px;
+  user-select: text;
+  color: #f5f9ff;
 }
 
 .contact-section-item-link {
   cursor: pointer;
-  text-decoration: none;
+
   display: flex;
   align-items: center;
 }
 
 .contact-section-item-link-underline {
   border-bottom: solid 3px #a7db43;
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 .contact-section-logos {
   transition: 0.3s;
-  width: 2.6em;
+  width: 1.5em;
 }
 
 .contact-section-copy-button {
@@ -358,6 +390,8 @@
   justify-content: center;
   margin-left: 5px;
   width: 2em;
+  box-sizing: border-box;
+  border: #c3acd083 0.1px solid;
 }
 
 .contact-section-copy-button > img {
@@ -365,6 +399,11 @@
 }
 
 .contact-section-copy-button:hover {
+  transition: 0.3s;
+  background-color: #c3acd0;
+}
+
+.contact-section-copy-button:focus {
   transition: 0.3s;
   background-color: #c3acd0;
 }
@@ -447,7 +486,7 @@
   }
   .contact-section-logos {
     transition: 0.3s;
-    width: 1.6em;
+    width: 1.3em;
   }
 }
 

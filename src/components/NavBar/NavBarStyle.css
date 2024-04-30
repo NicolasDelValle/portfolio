@@ -1,6 +1,5 @@
 .navBar-container {
   position: relative;
-  background-color: blue;
   z-index: 2;
 }
 
@@ -32,7 +31,6 @@
 }
 
 .menu-element {
-  transition: 0.3s;
   background: none;
   color: inherit;
   border: none;
@@ -42,8 +40,11 @@
   outline: inherit;
 }
 
+.menu-element:hover {
+  color: #c3acd0;
+}
+
 .menu-element:focus {
-  transition: 0.3s;
   color: #c3acd0;
 }
 
@@ -52,12 +53,10 @@
 }
 
 .j-c-center {
-  transition: 0.3s;
   justify-content: space-between;
 }
 
 .menu-element:hover {
-  transition: 0.3s;
   color: #c3acd0;
 }
 
@@ -123,7 +122,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 627px) {
   .navBar {
     transition: 0.3s;
     width: 100%;
@@ -139,7 +138,6 @@
   }
 
   .j-c-center {
-    transition: 0.3s;
     justify-content: center !important;
   }
 
@@ -148,13 +146,11 @@
   }
 
   .menu-option {
-    transition: 0.3s;
     font-size: 0px;
     padding: 0px;
   }
 
   .deco {
-    transition: 0.3s;
     font-size: 0px;
     padding: 0px;
   }
@@ -174,18 +170,15 @@
 
 @media screen and (max-width: 425px) {
   .menu-size-scaling {
-    transition: 0.3s;
     font-size: 5cqw;
   }
 
   .menu-option {
-    transition: 0.3s;
     font-size: 0px;
     padding: 0px;
   }
 
   .deco {
-    transition: 0.3s;
     font-size: 0px;
     padding: 0px;
   }
