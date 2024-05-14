@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "./HomeStyle.css";
 import "./ProjectsSection.css";
-import "./DecoStyle.css";
 
 import Section from "../../components/Secation/Section";
 import NavBar from "../../components/NavBar/NavBar";
@@ -317,7 +316,7 @@ function Home() {
               ref={meRef}
             >
               <div className="content font-main-white">
-                <div className="me-section-card-container default-shadow">
+                <div className="me-section-card-container bg-main-color-2 default-shadow">
                   <img
                     className="me-section-nico-img"
                     src={nicolsaWhiteBorder}
@@ -354,7 +353,7 @@ function Home() {
                   {t("meSection.a few things I can help you with")}
                 </span>
 
-                <div className="me-section-slider-container ">
+                <div className="me-section-slider-container bg-main-color-2">
                   <div className="me-section-slider-container-front" />
                   <Slider
                     className="me-section-slider-item-container"
@@ -429,16 +428,19 @@ function Home() {
                     />
 
                     <div className="card-body font-main-white">
-                      <span tabIndex={22} className="card-date">
+                      <span tabIndex={22} className="card-date default-shadow">
                         22/03/22 - 28/03/22
                       </span>
-                      <span tabIndex={23} className="card-title">
-                        LOSI E-Commerce{" "}
+                      <span tabIndex={23} className="card-title default-shadow">
+                        LOSI E-Commerce
                       </span>
-                      <span tabIndex={24} className="card-description">
+                      <span
+                        tabIndex={24}
+                        className="card-description default-shadow"
+                      >
                         {t("projectsSection.projects.losi.desc")}
                       </span>
-                      <div className="card-body-bottom-conainer">
+                      <div className="card-body-bottom-conainer default-shadow">
                         <span className="card-tech-text">
                           {t("projectsSection.tech")}
                         </span>
@@ -520,7 +522,6 @@ function Home() {
             ref={contactRef}
           >
             <div className="content font-main-white">
-              <div className="contact-section-deco" />
               <div className="contact-section-info-container">
                 <div className="contact-section-title-container">
                   <span
@@ -570,7 +571,7 @@ function Home() {
                   <button
                     tabIndex={tabeIndexThenProjects + 6}
                     title="Copy Email"
-                    className="contact-section-copy-button bg-main-color-analogous-1   default-shadow"
+                    className="contact-section-copy-button bg-main-color-2   default-shadow"
                     onClick={HandleCopyEmail}
                   >
                     <img src={copyIcon} alt="" />

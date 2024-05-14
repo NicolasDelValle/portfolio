@@ -70,7 +70,7 @@
 
 .card-body {
   transition: 0.5s;
-  background-color: #7d4edcaf;
+  background-color: #7d4edc7e;
   position: absolute;
   bottom: 0;
   height: 50%;
@@ -88,7 +88,8 @@
   text-align: left;
   margin-bottom: 8px;
   margin-top: 24px;
-  opacity: 0.5;
+  opacity: 0.8;
+  letter-spacing: 1px;
 }
 
 .card-title {
@@ -104,7 +105,8 @@
   line-height: 1em;
   text-align: left;
   margin-bottom: auto;
-  opacity: 0.5;
+  opacity: 0.8;
+  letter-spacing: 1px;
 }
 
 .card-body-bottom-conainer {
@@ -115,7 +117,8 @@
   transition: 0.3s;
   font-size: 0.8em;
   line-height: 1em;
-  opacity: 0.5;
+  opacity: 0.8;
+  letter-spacing: 1px;
 }
 
 .card-tech {

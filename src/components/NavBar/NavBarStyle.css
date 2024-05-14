@@ -102,7 +102,7 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 723px) {
   .navBar {
     transition: 0.3s;
     width: 100%;
@@ -168,9 +168,9 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 475px) {
   .menu-size-scaling {
-    font-size: 5cqw;
+    font-size: 4.5cqw;
   }
 
   .menu-option {
