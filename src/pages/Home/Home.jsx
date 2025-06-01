@@ -417,7 +417,7 @@ function Home() {
                     tabIndex={21}
                     className="card default-shadow"
                     style={{ backgroundColor: "#000" }}
-                    href="https://losi.vercel.app/"
+                    href="https://bootcamp-losi.vercel.app/"
                     rel="noreferrer"
                     target="_blank"
                   >
