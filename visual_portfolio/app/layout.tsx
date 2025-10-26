@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${vsCodeFont.variable} ${vsCodeMono.variable} antialiased bg-background text-foreground transition-colors duration-200 w-full h-full m-0 p-0`}
       >
         <ThemeProvider>
-          <ThemeToggle />
+
           {children}
         </ThemeProvider>
       </body>

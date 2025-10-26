@@ -1,7 +1,6 @@
-
-
 import { useNavBar } from "@/context/navBarContext";
 import Divider from "@mui/material/Divider";
+import Dropdown from "../../ui/Dropdown";
 
 function FileItem() {
 
@@ -27,38 +26,27 @@ function FileItem() {
   const isHovered = activeItem === file.name && isMenuOpen;
 
   return (
-    <div className="flex items-center text-[13px] relative z-20">
 
-      <div key='file-tab' className="relative">
-        <button
-          className={`px-2 py-0 hover:bg-hover transition-colors rounded-md z-50 ${isHovered ? 'bg-hover' : ''
-            }`}
-          onClick={toggleMenu}
-          onMouseEnter={() => setActiveItem(file.name)}
-        >
-          {file.name}
-        </button>
+    <Dropdown
+      isOpen={isHovered}
+      name={file.name}
+      onClick={toggleMenu}
+      onClose={toggleMenu}
+      onMouseEnter={() => setActiveItem(file.name)}
+      items={[
+        "New File",
+        "Open File...",
+        "Open Folder...",
+        <Divider className="bg-border" key={Math.random()} />,
+        "Save",
+        "Save As...",
+        "Save All",
+        <Divider className="bg-border" key={Math.random()} />,
+        "Close",
+        "Exit"
+      ]}
+    />
 
-        {isHovered && (
-          <div className="absolute top-full px-1 left-0 z-20 bg-background border border-border shadow-lg min-w-[200px] w-fit rounded-md">
-            {file.items.map((item, index) => (
-              item === "---" ? (
-                <Divider className="bg-border" key={index} />
-              ) : (
-                <button
-                  key={index}
-                  className="w-full text-left px-4 my-1 hover:bg-primary text-foreground hover:text-foreground transition-colors text-[13px] rounded-md"
-                  onClick={toggleMenu}
-                >
-                  {item}
-                </button>
-              )
-            ))}
-          </div>
-        )}
-      </div>
-
-    </div>
   );
 }
 

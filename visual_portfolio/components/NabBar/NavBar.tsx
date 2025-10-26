@@ -1,8 +1,9 @@
 import React from "react";
-import IconButton from '@mui/material/IconButton';
-import { CircleUserRound, MessageSquare, Settings } from 'lucide-react';
 import MenuBar from "./MenuBar";
 import { NavBarProvider } from "@/context/navBarContext";
+import GearIcon from "./MenuItems/Gear.Icon";
+import UserIcon from "./MenuItems/User.icon";
+import ChatIcon from "./MenuItems/Chat.Icon";
 
 
 const NavBarComponent = () => {
@@ -13,22 +14,15 @@ const NavBarComponent = () => {
         Hola este es el titulo
       </div>
       <div>
-
-        <IconButton aria-label="delete" size="small" >
-          <MessageSquare size={16} className="text-foreground hover:opacity-80 transition-all" />
-        </IconButton>
-        <IconButton aria-label="delete" size="small" >
-          <CircleUserRound size={16} className="text-foreground hover:opacity-80 transition-all" />
-        </IconButton>
-        <IconButton aria-label="delete" size="small" >
-          <Settings size={16} className="text-foreground hover:opacity-80 transition-all" />
-        </IconButton>
+        <div className="flex flex-row mx-2">
+          <ChatIcon />
+          <UserIcon />
+          <GearIcon />
+        </div>
       </div>
     </div>
   );
-};
-
-function NavBar() {
+}; function NavBar() {
   return (
     <NavBarProvider>
       <NavBarComponent />
