@@ -1,0 +1,335 @@
+{
+  "basics": {
+    "name": "Nicolás Del Valle",
+    "label": "Full Stack Developer",
+    "image": "/nico-logo.svg",
+    "email": "contact@nicolasdelvalle.dev",
+    "phone": "+598 97 688 183",
+    "summary": {
+      "en": "Passionate Full Stack Developer with expertise in modern web technologies. Focused on creating efficient, scalable, and user-friendly applications.",
+      "es": "Desarrollador Full Stack apasionado con experiencia en tecnologías web modernas. Enfocado en crear aplicaciones eficientes, escalables y fáciles de usar."
+    },
+    "location": {
+      "city": "Montevideo",
+      "country": "Uruguay"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "NicolasDelValle",
+        "url": "https://github.com/NicolasDelValle"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "nicolasdelvalle",
+        "url": "https://www.linkedin.com/in/nico-del-valle-dev/"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Frontend",
+        "enabled": true,
+        "keywords": [
+          {
+            "name": "React",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            "url": "https://react.dev"
+          },
+          {
+            "name": "Next.js",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+            "url": "https://nextjs.org"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+            "url": "https://www.typescriptlang.org"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "./icons/brands/tailwindcss.svg",
+            "url": "https://tailwindcss.com"
+          }
+        ]
+      },
+      {
+        "name": "Backend",
+        "enabled": true,
+        "keywords": [
+          {
+            "name": "Node.js",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+            "url": "https://nodejs.org"
+          },
+          {
+            "name": "Express",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+            "url": "https://expressjs.com"
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+            "url": "https://www.postgresql.org"
+          },
+          {
+            "name": "MongoDB",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+            "url": "https://www.mongodb.com"
+          }
+        ]
+      },
+      {
+        "name": "Tools",
+        "enabled": true,
+        "keywords": [
+          {
+            "name": "Git",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+            "url": "https://git-scm.com"
+          },
+          {
+            "name": "Docker",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+            "url": "https://www.docker.com"
+          },
+          {
+            "name": "VS Code",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+            "url": "https://code.visualstudio.com"
+          },
+          {
+            "name": "Figma",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+            "url": "https://www.figma.com"
+          }
+        ]
+      },
+      {
+        "name": "Cloud & DevOps",
+        "enabled": true,
+        "keywords": [
+          {
+            "name": "Azure",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+            "url": "https://azure.microsoft.com"
+          },
+          {
+            "name": "AWS",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+            "url": "https://aws.amazon.com"
+          },
+          {
+            "name": "Vercel",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+            "url": "https://vercel.com"
+          },
+          {
+            "name": "GitHub Actions",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
+            "url": "https://github.com/features/actions"
+          }
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": {
+        "en": "E-Commerce Platform",
+        "es": "Plataforma de E-Commerce"
+      },
+      "description": {
+        "en": "Full-stack e-commerce solution with payment integration and real-time inventory management.",
+        "es": "Solución de e-commerce completa con integración de pagos y gestión de inventario en tiempo real."
+      },
+      "technologies": ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
+      "url": "https://github.com/nicolasdelvalle/ecommerce",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": {
+        "en": "Task Management App",
+        "es": "App de Gestión de Tareas"
+      },
+      "description": {
+        "en": "Collaborative task management application with real-time updates and team features.",
+        "es": "Aplicación colaborativa de gestión de tareas con actualizaciones en tiempo real y funciones de equipo."
+      },
+      "technologies": ["React", "Node.js", "Socket.io", "MongoDB"],
+      "url": "https://github.com/nicolasdelvalle/taskmanager",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": {
+        "en": "Weather Dashboard",
+        "es": "Panel de Clima"
+      },
+      "description": {
+        "en": "Beautiful weather dashboard with forecasts and interactive maps.",
+        "es": "Hermoso panel de clima con pronósticos y mapas interactivos."
+      },
+      "technologies": ["React", "API Integration", "Chart.js", "Tailwind"],
+      "url": "https://github.com/nicolasdelvalle/weather",
+      "featured": false
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "icon": "💻",
+      "title": {
+        "en": "Web Development",
+        "es": "Desarrollo Web"
+      },
+      "description": {
+        "en": "Custom websites and web applications built with modern technologies like React, Next.js, and TypeScript.",
+        "es": "Sitios web y aplicaciones web personalizadas construidas con tecnologías modernas como React, Next.js y TypeScript."
+      },
+      "features": {
+        "en": [
+          "Responsive Design",
+          "SEO Optimization",
+          "Fast Performance",
+          "Modern UI/UX"
+        ],
+        "es": [
+          "Diseño Responsivo",
+          "Optimización SEO",
+          "Rendimiento Rápido",
+          "UI/UX Moderno"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "icon": "🎨",
+      "title": {
+        "en": "UI/UX Design",
+        "es": "Diseño UI/UX"
+      },
+      "description": {
+        "en": "User-centered design solutions that create intuitive and engaging digital experiences.",
+        "es": "Soluciones de diseño centradas en el usuario que crean experiencias digitales intuitivas y atractivas."
+      },
+      "features": {
+        "en": ["Wireframing", "Prototyping", "User Research", "Design Systems"],
+        "es": [
+          "Wireframing",
+          "Prototipado",
+          "Investigación de Usuarios",
+          "Sistemas de Diseño"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "icon": "⚙️",
+      "title": {
+        "en": "Backend Development",
+        "es": "Desarrollo Backend"
+      },
+      "description": {
+        "en": "Robust and scalable server-side solutions with Node.js, Express, and database integration.",
+        "es": "Soluciones robustas y escalables del lado del servidor con Node.js, Express e integración de bases de datos."
+      },
+      "features": {
+        "en": [
+          "REST APIs",
+          "Database Design",
+          "Authentication",
+          "Cloud Deployment"
+        ],
+        "es": [
+          "APIs REST",
+          "Diseño de BD",
+          "Autenticación",
+          "Despliegue en la Nube"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "icon": "📱",
+      "title": {
+        "en": "Responsive Design",
+        "es": "Diseño Responsivo"
+      },
+      "description": {
+        "en": "Mobile-first approach ensuring your website looks perfect on all devices and screen sizes.",
+        "es": "Enfoque mobile-first asegurando que tu sitio web se vea perfecto en todos los dispositivos y tamaños de pantalla."
+      },
+      "features": {
+        "en": [
+          "Mobile Optimization",
+          "Cross-browser",
+          "Touch Friendly",
+          "Adaptive Layouts"
+        ],
+        "es": [
+          "Optimización Móvil",
+          "Multi-navegador",
+          "Touch Friendly",
+          "Layouts Adaptativos"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "icon": "🚀",
+      "title": {
+        "en": "Performance Optimization",
+        "es": "Optimización de Rendimiento"
+      },
+      "description": {
+        "en": "Speed optimization and performance tuning to ensure fast loading times and smooth user experience.",
+        "es": "Optimización de velocidad y ajuste de rendimiento para garantizar tiempos de carga rápidos y experiencia fluida."
+      },
+      "features": {
+        "en": [
+          "Code Splitting",
+          "Lazy Loading",
+          "Image Optimization",
+          "Caching Strategies"
+        ],
+        "es": [
+          "Code Splitting",
+          "Lazy Loading",
+          "Optimización de Imágenes",
+          "Estrategias de Caché"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "icon": "🔧",
+      "title": {
+        "en": "Maintenance & Support",
+        "es": "Mantenimiento y Soporte"
+      },
+      "description": {
+        "en": "Ongoing support, updates, and maintenance to keep your application running smoothly and securely.",
+        "es": "Soporte continuo, actualizaciones y mantenimiento para mantener tu aplicación funcionando sin problemas y de forma segura."
+      },
+      "features": {
+        "en": [
+          "Bug Fixes",
+          "Security Updates",
+          "Feature Updates",
+          "Technical Support"
+        ],
+        "es": [
+          "Corrección de Bugs",
+          "Actualizaciones de Seguridad",
+          "Nuevas Funcionalidades",
+          "Soporte Técnico"
+        ]
+      }
+    }
+  ],
+  "config": {
+    "visual": true
+  }
+}

@@ -1,9 +1,13 @@
 
 import React, { useState } from 'react'
 import { Resizable } from 're-resizable';
+import { useI18n } from "@/hooks/useI18n";
+
+import SubMenu from './SubMenu';
 
 function SideBar() {
   const [isResizing, setIsResizing] = useState(false);
+  const { t } = useI18n();
 
   return (
     <Resizable
@@ -37,7 +41,7 @@ function SideBar() {
       onResizeStart={() => setIsResizing(true)}
       onResizeStop={() => setIsResizing(false)}
     >
-      Sample with default size
+      <SubMenu />
     </Resizable>
   )
 }

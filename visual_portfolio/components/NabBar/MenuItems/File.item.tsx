@@ -1,23 +1,24 @@
 import { useNavBar } from "@/context/navBarContext";
+import { useI18n } from "@/hooks/useI18n";
 import Divider from "@mui/material/Divider";
 import Dropdown from "../../ui/Dropdown";
 
 function FileItem() {
+  const { t } = useI18n();
 
   const file = {
-    name: "File",
+    name: t("fileMenu.file"),
     items: [
-      "New File",
-      "Open File...",
-      "Open Folder...",
-      "Open Recent",
-      "---",
-      "Save",
-      "Save As...",
-      "Save All",
-      "---",
-      "Close",
-      "Exit"
+      t("fileMenu.newFile"),
+      t("fileMenu.openFile"),
+      t("fileMenu.openFolder"),
+      <Divider className="bg-border" key={Math.random()} />,
+      t("fileMenu.save"),
+      t("fileMenu.saveAs"),
+      t("fileMenu.saveAll"),
+      <Divider className="bg-border" key={Math.random()} />,
+      t("fileMenu.close"),
+      t("fileMenu.exit")
     ]
   }
 
@@ -33,18 +34,7 @@ function FileItem() {
       onClick={toggleMenu}
       onClose={toggleMenu}
       onMouseEnter={() => setActiveItem(file.name)}
-      items={[
-        "New File",
-        "Open File...",
-        "Open Folder...",
-        <Divider className="bg-border" key={Math.random()} />,
-        "Save",
-        "Save As...",
-        "Save All",
-        <Divider className="bg-border" key={Math.random()} />,
-        "Close",
-        "Exit"
-      ]}
+      items={file.items}
     />
 
   );

@@ -99,11 +99,6 @@ export default function MyComponent() {
 </div>
 ```
 
-## 🔄 El botón de cambio de tema
-
-Ya está incluido en el layout y aparece en la esquina superior derecha.
-Muestra un icono de luna en modo claro y un icono de sol en modo oscuro.
-
 ## 💾 Persistencia
 
 El tema se guarda automáticamente en `localStorage` y se restaura al recargar la página.

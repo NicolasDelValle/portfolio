@@ -38,7 +38,7 @@ export interface DropdownItemProps {
   onClick?: () => void;
 }
 
-type DropdownItem = string | ReactNode | ActionItem;
+type DropdownItem = string | ReactNode | ActionItem | (() => string);
 
 interface ActionItem {
   name: string;

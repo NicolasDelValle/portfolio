@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/themeContext";
-import ThemeToggle from "@/components/ThemeToggle";
+import { LanguageProvider } from "@/context/languageContext";
+import LanguageButtons from "@/components/LanguageButtons";
 
 // Fuente principal de VS Code (similar a Segoe UI)
 const vsCodeFont = Inter({
@@ -36,8 +37,9 @@ export default function RootLayout({
         className={`${vsCodeFont.variable} ${vsCodeMono.variable} antialiased bg-background text-foreground transition-colors duration-200 w-full h-full m-0 p-0`}
       >
         <ThemeProvider>
-
-          {children}
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
