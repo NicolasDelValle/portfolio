@@ -2,9 +2,9 @@
 
 ## 📋 Antes de Empezar
 
-- [ ] Cuenta Hostinger activa
-- [ ] Dominio configurado (o usando temporal)
-- [ ] Acceso a hPanel
+- [x] Cuenta Hostinger activa
+- [x] Dominio configurado (o usando temporal)
+- [x] Acceso a hPanel
 
 ---
 
