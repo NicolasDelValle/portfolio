@@ -4,6 +4,9 @@ import { Resizable } from 're-resizable';
 import { useI18n } from "@/hooks/useI18n";
 
 import SubMenu from './SubMenu';
+import ScreenTrigger from './ScreenTrigger';
+import Folder from './Folder';
+import { FolderTree } from './FolderTree';
 
 function SideBar() {
   const [isResizing, setIsResizing] = useState(false);
@@ -33,6 +36,7 @@ function SideBar() {
           width: '4px',
           right: '-2px',
           backgroundColor: 'transparent',
+          zIndex: 5,
         }
       }}
       handleClasses={{
@@ -42,6 +46,30 @@ function SideBar() {
       onResizeStop={() => setIsResizing(false)}
     >
       <SubMenu />
+      <FolderTree>
+        <div>
+          <Folder name={t('sidebar.projects')}>
+            {/* Aquí irían los elementos del proyecto */}
+            <Folder name={t('sidebar.projects')}>
+              {/* Aquí irían los elementos del proyecto */}
+            </Folder>
+            <Folder name={t('sidebar.projects')}>
+              {/* Aquí irían los elementos del proyecto */}
+              <Folder name={t('sidebar.projects')}>
+                {/* Aquí irían los elementos del proyecto */}
+              </Folder>
+              <Folder name={t('sidebar.projects')}>
+                {/* Aquí irían los elementos del proyecto */}
+              </Folder>
+            </Folder>
+            <Folder name={t('sidebar.projects')}>
+              {/* Aquí irían los elementos del proyecto */}
+            </Folder>
+
+          </Folder>
+          <ScreenTrigger />
+        </div>
+      </FolderTree>
     </Resizable>
   )
 }

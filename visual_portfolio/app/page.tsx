@@ -13,7 +13,6 @@ import Image from 'next/image';
 import type { PortfolioData } from '@/types/portfolioTypes';
 import fallbackData from '@/public/data/portfolio.json';
 import { useI18n } from '@/hooks/useI18n';
-import { Divider } from '@mui/material';
 
 // Portfolio data URL - GitHub Gist
 const PORTFOLIO_DATA_URL = 'https://gist.githubusercontent.com/NicolasDelValle/00ff1302aeebbe61c304a8d9253aa6b1/raw/portfolioData.json';
