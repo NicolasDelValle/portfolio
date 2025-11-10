@@ -6,10 +6,12 @@ import Skills from '@/components/VisualComponents/Skills';
 // import Projects from '@/components/VisualComponents/Projects';
 import Services from '@/components/VisualComponents/Services';
 import Contact from '@/components/VisualComponents/Contact';
+import StructuredData from '@/components/StructuredData';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import type { PortfolioData } from '@/types/portfolioTypes';
 import fallbackData from '@/public/data/portfolio.json';
+import { useI18n } from '@/hooks/useI18n';
 
 // Portfolio data URL - GitHub Gist
 const PORTFOLIO_DATA_URL = 'https://gist.githubusercontent.com/NicolasDelValle/00ff1302aeebbe61c304a8d9253aa6b1/raw/portfolioData.json';
@@ -17,6 +19,7 @@ const PORTFOLIO_DATA_URL = 'https://gist.githubusercontent.com/NicolasDelValle/0
 export default function Home() {
   const [portfolioData, setPortfolioData] = useState<PortfolioData>(fallbackData as PortfolioData);
   const [isLoading, setIsLoading] = useState(true);
+  const { language } = useI18n();
 
   useEffect(() => {
     // Try to load from Gist, use fallback data if it fails
@@ -68,6 +71,20 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      {/* Structured Data para SEO - Rich Snippets en Google */}
+      <StructuredData
+        name={basics.name}
+        email={basics.email}
+        phone={basics.phone}
+        city={basics.location.city}
+        country={basics.location.country}
+        jobTitle={basics.label}
+        summary={basics.summary[language]}
+        image="https://nicolasdelvalle.dev/nico-logo.svg" // URL completa
+        url="https://nicolasdelvalle.dev"
+        sameAs={basics.profiles.map(p => p.url)}
+      />
+
       <Navbar visualEnabled={isVisualEnabled} />
 
       <main>

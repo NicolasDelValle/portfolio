@@ -11,6 +11,7 @@ export interface DropdownProps {
   config?: DropdownConfigs;
   trigger?: ReactNode;
   className?: string;
+  children?: ReactNode;
 }
 
 export interface TriggerProps {

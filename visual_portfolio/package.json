@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "npx serve@latest out",
+    "lint": "eslint",
+    "check:seo": "pwsh -File ./scripts/check-seo.ps1",
+    "export": "next build && next export"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",

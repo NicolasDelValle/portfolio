@@ -57,14 +57,13 @@ export const DropdownExamples = () => {
           onClose={() => setIsOpen3(false)}
           onMouseEnter={() => { }}
           items={sampleItems}
-          renderTrigger={(props) => (
+          trigger={(
             <div
-              {...props}
               className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded cursor-pointer"
             >
               <span>⚙️</span>
               <span>Configuración</span>
-              <span className={`transform transition-transform ${props.isOpen ? 'rotate-180' : ''}`}>
+              <span className={`transform transition-transform ${isOpen3 ? 'rotate-180' : ''}`}>
                 ▼
               </span>
             </div>
@@ -81,15 +80,14 @@ export const DropdownExamples = () => {
           onClose={() => setIsOpen4(false)}
           onMouseEnter={() => { }}
           items={sampleItems}
-          renderTrigger={(props) => (
+          trigger={(
             <button
-              {...props}
               className="relative inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               <span className="mr-2">📊</span>
               <span>Dashboard</span>
               <span className="ml-2">
-                {props.isOpen ? '🔼' : '🔽'}
+                {isOpen4 ? '🔼' : '🔽'}
               </span>
               {/* Badge de notificación */}
               <span className="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full"></span>
