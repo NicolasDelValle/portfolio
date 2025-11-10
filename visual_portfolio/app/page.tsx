@@ -7,11 +7,13 @@ import Skills from '@/components/VisualComponents/Skills';
 import Services from '@/components/VisualComponents/Services';
 import Contact from '@/components/VisualComponents/Contact';
 import StructuredData from '@/components/StructuredData';
+import ParallaxElements from '@/components/ParallaxElements';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import type { PortfolioData } from '@/types/portfolioTypes';
 import fallbackData from '@/public/data/portfolio.json';
 import { useI18n } from '@/hooks/useI18n';
+import { Divider } from '@mui/material';
 
 // Portfolio data URL - GitHub Gist
 const PORTFOLIO_DATA_URL = 'https://gist.githubusercontent.com/NicolasDelValle/00ff1302aeebbe61c304a8d9253aa6b1/raw/portfolioData.json';
@@ -85,6 +87,9 @@ export default function Home() {
         sameAs={basics.profiles.map(p => p.url)}
       />
 
+      {/* Parallax Elements */}
+      <ParallaxElements />
+
       <Navbar visualEnabled={isVisualEnabled} />
 
       <main>
@@ -110,7 +115,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-border text-center">
+      <footer className="py-8 px-4 text-center">
         <p className="text-gray-600 dark:text-gray-400">
           © {new Date().getFullYear()} {basics.name}. All rights reserved.
         </p>

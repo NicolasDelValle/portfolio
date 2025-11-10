@@ -4,9 +4,20 @@ import NavBar from "@/components/NabBar/NavBar";
 import SideBar from "@/components/SideBar/SideBar";
 import { useI18n } from "@/hooks/useI18n";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function VisualPage() {
   const { t } = useI18n();
+
+  useEffect(() => {
+    // Desactivar los efectos de fondo en esta página
+    document.body.classList.add('no-background-effects');
+
+    return () => {
+      // Restaurar los efectos al salir de la página
+      document.body.classList.remove('no-background-effects');
+    };
+  }, []);
 
   return (
     <div className="h-full overflow-hidden">

@@ -20,6 +20,7 @@ module.exports = {
         },
         foreground: "var(--foreground)",
         primary: "var(--primary)",
+        onPrimary: "var(--onPrimary)",
         secondary: "var(--secondary)",
         accent: "var(--accent)",
         success: "var(--success)",

@@ -24,7 +24,7 @@ export default function Skills({ skills }: SkillsProps) {
   }
 
   return (
-    <section id="skills" className="py-16  flex items-center px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-16  flex items-center px-4 sm:px-6 lg:px-8 bg-muted">
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">

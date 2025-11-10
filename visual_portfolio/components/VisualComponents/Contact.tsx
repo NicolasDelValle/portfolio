@@ -14,7 +14,7 @@ export default function Contact({ email, phone, location, profiles }: ContactPro
   const { t } = useI18n();
 
   return (
-    <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-muted dark:bg-sidebar">
+    <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">

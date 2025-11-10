@@ -30,6 +30,8 @@ body {
   --background-code: #f6f8fa;
   --foreground: #383a42;
   --primary: #0969da;
+  --onPrimary: #ebebeb;
+  --primary-rgb: 9, 105, 218;
   --secondary: #6f42c1;
   --accent: #d73a49;
   --success: #28a745;
@@ -53,6 +55,8 @@ body {
   --background-code: #1e1e1e;
   --foreground: #bcbcbc;
   --primary: #007acc;
+  --onPrimary: #ebebeb;
+  --primary-rgb: 0, 122, 204;
   --secondary: #c586c0;
   --accent: #f44747;
   --success: #4ec9b0;
@@ -155,6 +159,12 @@ body::after {
   66% {
     transform: translate(-5%, 5%) rotate(-5deg);
   }
+}
+
+/* Clase para desactivar los fondos */
+body.no-background-effects::before,
+body.no-background-effects::after {
+  display: none;
 }
 
 /* Dot pattern alternative (can be toggled) */
