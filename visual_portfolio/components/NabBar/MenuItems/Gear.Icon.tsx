@@ -1,11 +1,13 @@
 import Dropdown from '@/components/ui/Dropdown';
 import { useTheme } from '@/context/themeContext';
+import { useI18n } from '@/hooks/useI18n';
 import { Divider, IconButton, Tooltip } from '@mui/material';
 import { ChevronRight, Settings } from 'lucide-react';
 import { useState } from 'react'
 
 function Theme() {
   const { setDarkMode, setLightMode } = useTheme();
+  const { t } = useI18n();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -22,21 +24,52 @@ function Theme() {
       trigger={
         <button>
           <span>
-            Theme
+            {t('settings.theme')}
           </span>
           <ChevronRight className='opacity-50' width={16} height={16} />
         </button>
       }
       items={[
-        { name: "Light", action: setLightMode },
-        { name: "Dark", action: setDarkMode },
+        { name: t('settings.light'), action: setLightMode },
+        { name: t('settings.dark'), action: setDarkMode },
+      ]}
+    />
+  );
+}
+
+function Language() {
+  const { setLanguage, t } = useI18n();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  return (
+    <Dropdown
+      isOpen={isOpen}
+      onClick={() => setIsOpen(true)}
+      onMouseEnter={() => setIsOpen(true)}
+      onClose={() => setIsOpen(false)}
+      className="w-full text-left px-4 my-1 hover:bg-primary text-foreground dark:hover:text-foreground hover:text-hover transition-colors text-[13px] rounded-md flex flex-row justify-between items-center"
+      config={{
+        orientation: "left",
+        position: "start"
+      }}
+      trigger={
+        <button>
+          <span>
+            {t('settings.language')}
+          </span>
+          <ChevronRight className='opacity-50' width={16} height={16} />
+        </button>
+      }
+      items={[
+        { name: t('settings.english'), action: () => setLanguage('en') },
+        { name: t('settings.spanish'), action: () => setLanguage('es') },
       ]}
     />
   );
 }
 
 function GearIcon() {
-
+  const { t } = useI18n();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -52,7 +85,7 @@ function GearIcon() {
       }}
       trigger={
         <Tooltip
-          title="Manage"
+          title={t('settings.manage')}
           disableInteractive={isOpen}
           arrow
           className='shadow-2xl'
@@ -83,13 +116,14 @@ function GearIcon() {
         </Tooltip>
       }
       items={[
-        "Command Palette",
+        t('settings.commandPalette'),
         <Divider className="bg-border" key={Math.random()} />,
-        "New File",
+        t('settings.newFile'),
         <Theme key={Math.random()} />,
+        <Language key={Math.random()} />,
         <Divider className="bg-border" key={Math.random()} />,
-        "Close",
-        "Exit"
+        t('settings.close'),
+        t('settings.exit')
       ]}
     />
 

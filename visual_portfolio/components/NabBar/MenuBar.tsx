@@ -3,6 +3,7 @@ import { useNavBar } from "@/context/navBarContext";
 import FileItem from "./MenuItems/File.item";
 import EditItem from "./MenuItems/Edit.item";
 import Image from "next/image";
+import Link from "next/link";
 
 function MenuBar() {
   const { isMenuOpen, toggleMenu } = useNavBar();
@@ -11,13 +12,15 @@ function MenuBar() {
 
     <div className="flex items-center text-[13px] relative">
 
-      <Image
-        src="/nico-logo.svg"
-        alt="Nico Logo"
-        width={22}
-        height={22}
-        className="mx-[8px] "
-      />
+      <Link href="/" className="cursor-pointer">
+        <Image
+          src="/nico-logo.svg"
+          alt="Nico Logo"
+          width={22}
+          height={22}
+          className="mx-[8px]"
+        />
+      </Link>
       <FileItem />
       <EditItem />
       {isMenuOpen && <div

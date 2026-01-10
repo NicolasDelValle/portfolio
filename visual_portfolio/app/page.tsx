@@ -91,7 +91,8 @@ export default function Home() {
 
       <Navbar visualEnabled={isVisualEnabled} />
 
-      <main>
+      {/* Main content with proper spacing for fixed navbar */}
+      <main className="pt-16">
         <Hero
           name={basics.name}
           label={basics.label}

@@ -13,6 +13,7 @@
     "visual": "Visual",
     "skills": "Habilidades",
     "services": "Servicios",
+    "loading": "Cargando...",
     "pageNotFound": "Página No Encontrada",
     "pageNotFoundDescription": "La página que buscas no existe o ha sido movida.",
     "backToHome": "Volver al Inicio",
@@ -49,7 +50,9 @@
     "email": "Correo",
     "phone": "Teléfono",
     "services": "Servicios",
-    "servicesDescription": "Soluciones profesionales adaptadas a tus necesidades"
+    "servicesDescription": "Soluciones profesionales adaptadas a tus necesidades",
+    "noFileOpen": "Ningún archivo está abierto",
+    "selectFileMessage": "Por favor selecciona un archivo desde la barra lateral para ver su contenido."
   },
   "fileMenu": {
     "file": "Archivo",
@@ -59,6 +62,104 @@
     "save": "Guardar",
     "saveAs": "Guardar Como...",
     "saveAll": "Guardar Todo",
+    "close": "Cerrar",
+    "exit": "Salir"
+  },
+  "screens": {
+    "initial": "Que es esto.md",
+    "about": "Sobre Mi.md",
+    "skills": {
+      "frontend": "Frontend.tsx",
+      "backend": "Backend.tsx",
+      "tools": "Herramientas.tsx",
+      "cloud": "Cloud & DevOps.tsx"
+    },
+    "contact": "Contacto.md"
+  },
+  "initialScreen": {
+    "title": "👋 ¡Bienvenido a mi Portfolio Visual!",
+    "subtitle": "Una experiencia interactiva inspirada en VS Code",
+    "mobileWarning": {
+      "title": "Advertencia: No optimizado para móviles",
+      "description": "Esta experiencia está diseñada principalmente para pantallas de escritorio. Para una mejor experiencia, visítala desde una computadora o tablet en modo horizontal."
+    },
+    "hrNotice": {
+      "title": "¿Eres de Recursos Humanos o prefieres un portfolio tradicional?",
+      "description": "Si esta interfaz de desarrollador no es tu estilo, puedes ver mi portfolio en formato tradicional con toda la información de manera más convencional.",
+      "button": "← Ir al Portfolio Tradicional",
+      "logoTip": "💡 También puedes hacer clic en el logo de la esquina superior izquierda para volver"
+    },
+    "whatIsThis": {
+      "title": "¿Qué es esto?",
+      "description": "Estás viendo mi portfolio profesional presentado de una manera única y diferente. En lugar de un sitio web tradicional, he recreado la experiencia de Visual Studio Code para mostrar mi trabajo, habilidades y proyectos de una forma más interactiva y familiar para desarrolladores."
+    },
+    "visualExperience": {
+      "title": "La Experiencia Visual",
+      "description": "Este portfolio imita la interfaz de VS Code, uno de los editores de código más populares. Cada sección de mi perfil profesional está organizada como si fueran archivos y carpetas en un proyecto real. Esto no solo muestra mis habilidades técnicas, sino que también ofrece una navegación intuitiva para quienes están familiarizados con entornos de desarrollo."
+    },
+    "howToNavigate": {
+      "title": "¿Cómo navegar?",
+      "item1": "📁 Usa el panel lateral izquierdo para explorar las diferentes secciones (proyectos, habilidades, experiencia, etc.)",
+      "item2": "📄 Haz clic en cualquier archivo para abrir una nueva pestaña con su contenido",
+      "item3": "✖️ Puedes cerrar pestañas haciendo clic en la 'X' cuando pases el mouse sobre ellas",
+      "item4": "🎨 Cambia entre tema claro y oscuro usando el botón en la esquina superior derecha"
+    },
+    "explore": {
+      "title": "Comienza a Explorar",
+      "description": "Siéntete libre de navegar por las carpetas, abrir archivos y descubrir más sobre mi trabajo. Cada sección contiene información detallada sobre mis proyectos, tecnologías que domino, experiencia profesional y formas de contactarme. ¡Disfruta la experiencia!"
+    },
+    "detailedInfo": {
+      "title": "Información Detallada",
+      "description": "En esta versión del portfolio encontrarás información más técnica y detallada sobre mi trayectoria profesional, stack tecnológico, arquitectura de proyectos y metodologías de trabajo. Es la versión completa pensada para desarrolladores, tech leads y equipos técnicos que quieran conocer en profundidad mi perfil profesional."
+    },
+    "footer": "💻 Desarrollado con Next.js, TypeScript y mucho ☕"
+  },
+  "aboutScreen": {
+    "summary": "Resumen",
+    "location": "Ubicación",
+    "contact": "Contacto",
+    "profiles": "Perfiles Sociales"
+  },
+  "skillScreen": {
+    "description": "Tecnologías y herramientas que domino",
+    "footer": "Haz clic en cualquier tecnología para aprender más sobre ella"
+  },
+  "projectScreen": {
+    "featured": "Destacado",
+    "description": "Descripción",
+    "technologies": "Tecnologías Utilizadas",
+    "links": "Enlaces",
+    "viewOnGitHub": "Ver en GitHub"
+  },
+  "serviceScreen": {
+    "description": "Descripción del Servicio",
+    "features": "Características Incluidas",
+    "footer": "¿Interesado en este servicio? Contáctame para más información"
+  },
+  "contactScreen": {
+    "title": "Contacto",
+    "subtitle": "¿Trabajamos juntos? Contáctame por cualquiera de estos medios",
+    "email": "Email",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "social": "Redes Sociales",
+    "footer": "Respondo a todos los mensajes en menos de 24 horas"
+  },
+  "sidebar": {
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "services": "Servicios"
+  },
+  "settings": {
+    "manage": "Administrar",
+    "commandPalette": "Paleta de Comandos",
+    "newFile": "Nuevo Archivo",
+    "theme": "Tema",
+    "language": "Idioma",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "english": "English",
+    "spanish": "Español",
     "close": "Cerrar",
     "exit": "Salir"
   }

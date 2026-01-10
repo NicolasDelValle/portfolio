@@ -33,21 +33,25 @@
           {
             "name": "React",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
             "url": "https://react.dev"
           },
           {
             "name": "Next.js",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
             "url": "https://nextjs.org"
           },
           {
             "name": "TypeScript",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
             "url": "https://www.typescriptlang.org"
           },
           {
             "name": "Tailwind CSS",
             "icon": "./icons/brands/tailwindcss.svg",
+            "visualIcon": "./icons/brands/tailwindcss.svg",
             "url": "https://tailwindcss.com"
           }
         ]
@@ -59,21 +63,25 @@
           {
             "name": "Node.js",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
             "url": "https://nodejs.org"
           },
           {
             "name": "Express",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
             "url": "https://expressjs.com"
           },
           {
             "name": "PostgreSQL",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
             "url": "https://www.postgresql.org"
           },
           {
             "name": "MongoDB",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
             "url": "https://www.mongodb.com"
           }
         ]
@@ -85,21 +93,25 @@
           {
             "name": "Git",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
             "url": "https://git-scm.com"
           },
           {
             "name": "Docker",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
             "url": "https://www.docker.com"
           },
           {
             "name": "VS Code",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
             "url": "https://code.visualstudio.com"
           },
           {
             "name": "Figma",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
             "url": "https://www.figma.com"
           }
         ]
@@ -111,21 +123,25 @@
           {
             "name": "Azure",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
             "url": "https://azure.microsoft.com"
           },
           {
             "name": "AWS",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
             "url": "https://aws.amazon.com"
           },
           {
             "name": "Vercel",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
             "url": "https://vercel.com"
           },
           {
             "name": "GitHub Actions",
             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
+            "visualIcon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
             "url": "https://github.com/features/actions"
           }
         ]
@@ -179,7 +195,8 @@
   "services": [
     {
       "id": 1,
-      "icon": "💻",
+      "icon": "./icons/services/devices.png",
+      "visualIcon": "./icons/services/devices.png",
       "title": {
         "en": "Web Development",
         "es": "Desarrollo Web"
@@ -205,7 +222,8 @@
     },
     {
       "id": 2,
-      "icon": "🎨",
+      "icon": "./icons/services/art.svg",
+      "visualIcon": "./icons/services/art.svg",
       "title": {
         "en": "UI/UX Design",
         "es": "Diseño UI/UX"
@@ -226,7 +244,8 @@
     },
     {
       "id": 3,
-      "icon": "⚙️",
+      "icon": "./icons/services/settings.png",
+      "visualIcon": "./icons/services/settings.png",
       "title": {
         "en": "Backend Development",
         "es": "Desarrollo Backend"
@@ -252,7 +271,8 @@
     },
     {
       "id": 4,
-      "icon": "📱",
+      "icon": "./icons/services/order-food.png",
+      "visualIcon": "./icons/services/order-food.png",
       "title": {
         "en": "Responsive Design",
         "es": "Diseño Responsivo"
@@ -278,7 +298,8 @@
     },
     {
       "id": 5,
-      "icon": "🚀",
+      "icon": "./icons/services/rocket.png",
+      "visualIcon": "./icons/services/rocket.png",
       "title": {
         "en": "Performance Optimization",
         "es": "Optimización de Rendimiento"
@@ -304,7 +325,8 @@
     },
     {
       "id": 6,
-      "icon": "🔧",
+      "icon": "./icons/services/maintenance.png",
+      "visualIcon": "./icons/services/maintenance.png",
       "title": {
         "en": "Maintenance & Support",
         "es": "Mantenimiento y Soporte"
@@ -327,6 +349,206 @@
           "Soporte Técnico"
         ]
       }
+    }
+  ],
+  "work": [
+    {
+      "id": 1,
+      "company": "Alsacia",
+      "position": {
+        "en": "Full Stack Developer",
+        "es": "Desarrollador Full Stack"
+      },
+      "startDate": "2025-01-01",
+      "endDate": null,
+      "current": true,
+      "location": "Remote",
+      "description": {
+        "en": "Fullstack development from project start with focus on architecture definition, technology selection, and scalable solution delivery. Applied clean architecture and design patterns consistently while improving development workflows and team collaboration.",
+        "es": "Desarrollo fullstack desde el inicio del proyecto con enfoque en definición de arquitectura, selección de tecnologías y entrega de soluciones escalables. Apliqué arquitectura limpia y patrones de diseño de manera consistente mientras mejoraba los flujos de desarrollo y colaboración del equipo."
+      },
+      "highlights": {
+        "en": [
+          "Enhanced fullstack development with modern frontend and enterprise backend technologies",
+          "Applied clean architecture, design patterns, and dependency injection consistently",
+          "Delivered scalable, maintainable, and high-performance solutions",
+          "Optimized API development and frontend-backend integration",
+          "Improved Git practices and development workflows in agile teams",
+          "Strengthened communication, problem-solving, and decision-making skills"
+        ],
+        "es": [
+          "Mejoré desarrollo fullstack con tecnologías frontend modernas y backend empresarial",
+          "Apliqué arquitectura limpia, patrones de diseño e inyección de dependencias consistentemente",
+          "Entregué soluciones escalables, mantenibles y de alto rendimiento",
+          "Optimicé desarrollo de APIs e integración frontend-backend",
+          "Mejoré prácticas de Git y flujos de desarrollo en equipos ágiles",
+          "Fortalecí habilidades de comunicación, resolución de problemas y toma de decisiones"
+        ]
+      },
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS v4",
+        "Zustand",
+        "JWT",
+        "C# .NET Core",
+        "Entity Framework",
+        "SQL Server",
+        "Swagger",
+        "Git",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "id": 2,
+      "company": "Dixtra",
+      "position": {
+        "en": "Full Stack Developer",
+        "es": "Desarrollador Full Stack"
+      },
+      "startDate": "2020-03-01",
+      "endDate": "2021-12-31",
+      "current": false,
+      "location": "Montevideo, Uruguay",
+      "description": {
+        "en": "Developed custom web solutions for various clients, from e-commerce platforms to corporate websites.",
+        "es": "Desarrollé soluciones web personalizadas para varios clientes, desde plataformas de e-commerce hasta sitios corporativos."
+      },
+      "highlights": {
+        "en": [
+          "Built 15+ client projects from concept to deployment",
+          "Improved client satisfaction score to 95%",
+          "Implemented responsive designs across all projects"
+        ],
+        "es": [
+          "Construí más de 15 proyectos de clientes hasta despliegue",
+          "Mejoré la satisfacción del cliente al 95%",
+          "Implementé diseños responsivos en todos los proyectos"
+        ]
+      },
+      "technologies": ["React", "Vue.js", "Express", "MongoDB", "Tailwind CSS"]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "Universidad de la República",
+      "area": {
+        "en": "Computer Science",
+        "es": "Ciencias de la Computación"
+      },
+      "studyType": {
+        "en": "Bachelor's Degree",
+        "es": "Licenciatura"
+      },
+      "startDate": "2015-03-01",
+      "endDate": "2019-12-15",
+      "score": "8.5/10",
+      "location": "Montevideo, Uruguay",
+      "courses": {
+        "en": [
+          "Data Structures and Algorithms",
+          "Web Development",
+          "Database Systems",
+          "Software Engineering"
+        ],
+        "es": [
+          "Estructuras de Datos y Algoritmos",
+          "Desarrollo Web",
+          "Sistemas de Bases de Datos",
+          "Ingeniería de Software"
+        ]
+      }
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "date": "2023-06-15",
+      "url": "https://aws.amazon.com/certification/",
+      "credentialId": "AWS-SAA-123456"
+    },
+    {
+      "id": 2,
+      "name": "Microsoft Azure Developer Associate",
+      "issuer": "Microsoft",
+      "date": "2023-03-20",
+      "credentialId": "AZ-204-789012"
+    }
+  ],
+  "codeSnippets": [
+    {
+      "id": 1,
+      "title": {
+        "en": "Custom React Hook for API Calls",
+        "es": "Hook Personalizado de React para Llamadas API"
+      },
+      "description": {
+        "en": "A reusable custom hook for handling API requests with loading, error states, and caching.",
+        "es": "Un hook personalizado reutilizable para manejar peticiones API con estados de carga, error y caché."
+      },
+      "language": "typescript",
+      "category": "React",
+      "tags": ["react", "hooks", "typescript", "api"],
+      "code": "import { useState, useEffect } from 'react';\n\ninterface UseApiReturn<T> {\n  data: T | null;\n  loading: boolean;\n  error: Error | null;\n}\n\nexport function useApi<T>(url: string): UseApiReturn<T> {\n  const [data, setData] = useState<T | null>(null);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState<Error | null>(null);\n\n  useEffect(() => {\n    const fetchData = async () => {\n      try {\n        const response = await fetch(url);\n        if (!response.ok) throw new Error('Network error');\n        const result = await response.json();\n        setData(result);\n      } catch (err) {\n        setError(err as Error);\n      } finally {\n        setLoading(false);\n      }\n    };\n    fetchData();\n  }, [url]);\n\n  return { data, loading, error };\n}",
+      "featured": true,
+      "fileName": "useApi.ts"
+    },
+    {
+      "id": 2,
+      "title": {
+        "en": "Debounce Hook for Search",
+        "es": "Hook de Debounce para Búsqueda"
+      },
+      "description": {
+        "en": "Optimizes search inputs by delaying execution until user stops typing.",
+        "es": "Optimiza inputs de búsqueda retrasando ejecución hasta que el usuario deja de escribir."
+      },
+      "language": "typescript",
+      "category": "React",
+      "tags": ["react", "hooks", "performance"],
+      "code": "import { useEffect, useState } from 'react';\n\nexport function useDebounce<T>(value: T, delay: number = 500): T {\n  const [debouncedValue, setDebouncedValue] = useState<T>(value);\n\n  useEffect(() => {\n    const handler = setTimeout(() => {\n      setDebouncedValue(value);\n    }, delay);\n\n    return () => clearTimeout(handler);\n  }, [value, delay]);\n\n  return debouncedValue;\n}\n\n// Usage:\n// const [search, setSearch] = useState('');\n// const debouncedSearch = useDebounce(search, 500);",
+      "featured": false,
+      "fileName": "useDebounce.ts"
+    },
+    {
+      "id": 3,
+      "title": {
+        "en": "TypeScript Utility Types",
+        "es": "Tipos de Utilidad de TypeScript"
+      },
+      "description": {
+        "en": "Commonly used TypeScript utility types for better type safety.",
+        "es": "Tipos de utilidad de TypeScript comúnmente usados para mejor seguridad de tipos."
+      },
+      "language": "typescript",
+      "category": "TypeScript",
+      "tags": ["typescript", "types", "utility"],
+      "code": "// Deep Partial\ntype DeepPartial<T> = {\n  [P in keyof T]?: T[P] extends object\n    ? DeepPartial<T[P]>\n    : T[P];\n};\n\n// NonEmptyArray\ntype NonEmptyArray<T> = [T, ...T[]];\n\n// Prettify - Makes types readable\ntype Prettify<T> = {\n  [K in keyof T]: T[K];\n} & {};\n\n// Example:\ninterface User {\n  name: string;\n  profile: { age: number };\n}\n\ntype PartialUser = DeepPartial<User>;\nconst users: NonEmptyArray<string> = ['Alice'];",
+      "featured": true,
+      "fileName": "utilityTypes.ts"
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": 1,
+      "slug": "typescript-best-practices",
+      "title": {
+        "en": "TypeScript Best Practices 2024",
+        "es": "Mejores Prácticas de TypeScript 2024"
+      },
+      "excerpt": {
+        "en": "Learn the latest TypeScript patterns and practices for maintainable code.",
+        "es": "Aprende los últimos patrones y prácticas de TypeScript para código mantenible."
+      },
+      "date": "2024-01-15",
+      "readTime": 8,
+      "category": "TypeScript",
+      "tags": ["typescript", "best-practices"],
+      "featured": true,
+      "published": true
     }
   ],
   "config": {

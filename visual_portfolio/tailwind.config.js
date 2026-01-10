@@ -47,7 +47,34 @@ module.exports = {
           "monospace",
         ],
       },
+      textShadow: {
+        "primary-glow": "var(--primary) 1px 0 10px",
+        "primary-sm": "var(--primary) 1px 1px 3px",
+        "primary-md": "var(--primary) 2px 2px 8px",
+        "primary-lg": "var(--primary) 3px 3px 15px",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".text-shadow-primary-glow": {
+          textShadow: "var(--primary) 1px 0 10px",
+        },
+        ".text-shadow-primary-sm": {
+          textShadow: "var(--primary) 1px 1px 3px",
+        },
+        ".text-shadow-primary-md": {
+          textShadow: "var(--primary) 2px 2px 8px",
+        },
+        ".text-shadow-primary-lg": {
+          textShadow: "var(--primary) 3px 3px 15px",
+        },
+        ".text-shadow-none": {
+          textShadow: "none",
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 };

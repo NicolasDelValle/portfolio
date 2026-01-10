@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useI18n } from '@/hooks/useI18n';
 import { useTheme } from '@/context/themeContext';
+import { useScrollDirection } from '@/hooks/useScrollDirection';
 import Button from '@/components/ui/Button/Button';
 
 interface NavbarProps {
@@ -16,29 +17,54 @@ function Navbar({ visualEnabled = false }: NavbarProps) {
   const { language, changeToEnglish, changeToSpanish, t } = useI18n();
   const { theme, toggleTheme } = useTheme();
 
+  // Scroll direction hook
+  const { shouldHideNavbar, isAtTop, scrollY } = useScrollDirection({
+    threshold: 80,
+    debounce: 5
+  });
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  // Dynamic styling based on scroll
+  const navbarClasses = `
+    backdrop-blur-md border-b border-border dark:border-border 
+    fixed top-0 left-0 right-0 z-50 
+    transition-all duration-500 ease-in-out
+    ${shouldHideNavbar
+      ? 'transform -translate-y-full opacity-0'
+      : 'transform translate-y-0 opacity-100'
+    }
+    ${isAtTop
+      ? 'bg-background/80 shadow-none border-transparent'
+      : 'bg-background/95 shadow-lg border-border/50'
+    }
+  `;
+
+  // Logo scaling effect
+  const logoScale = isAtTop ? 'scale-100' : 'scale-90';
+  const logoTransition = 'transition-transform duration-300 ease-out';
 
   // Solo mostrar "Visual" si está habilitado
   const navItems = visualEnabled ? [{ key: 'visual', id: 'visual' }] : [];
 
   return (
-    <nav className=" backdrop-blur-md border-b border-border dark:border-border sticky top-0 z-50 transition-all duration-300">
+    <nav className={navbarClasses.trim()}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className={`flex justify-between items-center transition-all duration-300 ${isAtTop ? 'h-16' : 'h-14'
+          }`}>
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity duration-200">
-
+          <div className={`flex-shrink-0 flex items-center hover:opacity-80 transition-all duration-300 ${logoTransition} ${logoScale}`}>
             <Image
               src="/nico-logo.svg"
               alt="Logo"
               width={120}
               height={40}
-              className="h-8 w-auto"
+              className={`h-auto w-auto transition-all duration-300 ${isAtTop ? 'max-h-8' : 'max-h-7'
+                }`}
               priority
             />
-
           </div>
 
           {/* Desktop Menu */}
@@ -264,6 +290,15 @@ function Navbar({ visualEnabled = false }: NavbarProps) {
         </div>
 
       </div>
+
+      {/* Scroll Progress Indicator */}
+      <div
+        className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-primary/80 to-primary transition-all duration-300"
+        style={{
+          width: `${Math.min((scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100, 100)}%`,
+          opacity: isAtTop ? 0 : 0.8
+        }}
+      />
     </nav>
   );
 }

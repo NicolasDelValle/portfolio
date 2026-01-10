@@ -2,6 +2,7 @@
 
 import { useI18n } from '@/hooks/useI18n';
 import type { Location, Profile } from '@/types/portfolioTypes';
+import GlowBorderCard from '@/components/ui/GlowBorderCard';
 
 interface ContactProps {
   email: string;
@@ -25,11 +26,12 @@ export default function Contact({ email, phone, location, profiles }: ContactPro
           </p>
         </div>
 
-        <div className="bg-background dark:bg-background-card rounded-lg p-8 shadow-md border border-border">
-          {/* Contact Info */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            {/* Email */}
-            <div className="flex items-center gap-3">
+        <GlowBorderCard glowSpeed={1.5}>
+          <div className="p-8">
+            {/* Contact Info */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {/* Email */}
+              <div className="flex items-center gap-3">
               <div className="flex-shrink-0 w-12 h-12 bg-primary/10 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-primary dark:text-blue-400"
@@ -134,8 +136,9 @@ export default function Contact({ email, phone, location, profiles }: ContactPro
                 ))}
               </div>
             </div>
+            </div>
           </div>
-        </div>
+        </GlowBorderCard>
       </div>
     </section>
   );

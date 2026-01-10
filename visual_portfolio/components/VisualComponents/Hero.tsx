@@ -4,6 +4,7 @@ import { useI18n } from '@/hooks/useI18n';
 import Image from 'next/image';
 import type { MultilingualText } from '@/types/portfolioTypes';
 import ContainedBackground from '../ContainedBackground';
+import Card3D from '../ui/Card3D';
 
 interface HeroProps {
   name: string;
@@ -24,17 +25,19 @@ export default function Hero({ name, label, image, summary }: HeroProps) {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
           {/* Image */}
           <div className="flex-shrink-0">
-            <div className="hero-image-wrapper">
-              <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary">
-                <Image
-                  src='/Nicolas Del Valle.png'
-                  alt={name}
-                  fill
-                  className="object-cover"
-                  priority
-                />
+            <Card3D translateZ={10}>
+              <div className="hero-image-wrapper">
+                <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary">
+                  <Image
+                    src='/Nicolas Del Valle.png'
+                    alt={name}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
               </div>
-            </div>
+            </Card3D>
           </div>
 
           {/* Content */}
@@ -42,10 +45,10 @@ export default function Hero({ name, label, image, summary }: HeroProps) {
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-2">
               {t('portfolio.hello')}
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 md:mb-4 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 md:mb-4 leading-tight ">
               {name}
             </h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl text-primary dark:text-blue-400 font-semibold mb-4 md:mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-primary dark:text-blue-400 font-semibold mb-4 md:mb-6 text-shadow-primary-lg">
               {label}
             </h2>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6 md:mb-8 px-2 md:px-0">
@@ -64,6 +67,6 @@ export default function Hero({ name, label, image, summary }: HeroProps) {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

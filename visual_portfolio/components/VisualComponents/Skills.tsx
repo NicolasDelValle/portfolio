@@ -4,13 +4,12 @@ import { useI18n } from '@/hooks/useI18n';
 import Image from 'next/image';
 import type { Skill } from '@/types/portfolioTypes';
 
+
 interface SkillsProps {
   skills: Skill[];
 }
 
-// Función para determinar si es un emoji o una URL/ruta
 const isEmoji = (str: string) => {
-  // Detecta si es un emoji (caracteres unicode especiales)
   const emojiRegex = /[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F900}-\u{1F9FF}\u{1F1E0}-\u{1F1FF}]/u;
   return emojiRegex.test(str);
 };
@@ -18,13 +17,13 @@ const isEmoji = (str: string) => {
 export default function Skills({ skills }: SkillsProps) {
   const { t } = useI18n();
 
-  // Si no hay skills, no mostrar la sección
   if (!skills || skills.length === 0) {
     return null;
   }
 
   return (
-    <section id="skills" className="py-16  flex items-center px-4 sm:px-6 lg:px-8 bg-muted">
+    <section id="skills" className="py-16  flex items-center px-4 sm:px-6 lg:px-8 bg-priamry/80 backdrop-blur-md">
+
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -37,8 +36,8 @@ export default function Skills({ skills }: SkillsProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skills.map((skill, index) => (
-            <div
-              key={index}
+
+            <div key={index}
               className="bg-background dark:bg-background-card rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:border-primary group"
             >
               <h3 className="text-xl font-semibold mb-4 text-primary group-hover:text-primary/80 transition-colors">
@@ -48,7 +47,6 @@ export default function Skills({ skills }: SkillsProps) {
                 {skill.keywords.map((keyword, idx) => {
                   const content = (
                     <>
-                      {/* Icono - puede ser emoji, URL o imagen local */}
                       <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
                         {isEmoji(keyword.icon) ? (
                           <span className="text-xl" role="img" aria-label={keyword.name}>
@@ -65,7 +63,6 @@ export default function Skills({ skills }: SkillsProps) {
                         )}
                       </div>
                       <span className="font-medium">{keyword.name}</span>
-                      {/* Icono de link externo cuando hay URL */}
                       {keyword.url && (
                         <svg
                           className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
@@ -84,7 +81,6 @@ export default function Skills({ skills }: SkillsProps) {
                     </>
                   );
 
-                  // Si tiene URL, renderiza como link
                   if (keyword.url) {
                     return (
                       <a
@@ -100,7 +96,6 @@ export default function Skills({ skills }: SkillsProps) {
                     );
                   }
 
-                  // Si no tiene URL, renderiza como div
                   return (
                     <div
                       key={idx}
@@ -112,6 +107,7 @@ export default function Skills({ skills }: SkillsProps) {
                 })}
               </div>
             </div>
+
           ))}
         </div>
       </div>

@@ -5,7 +5,7 @@ import { ChevronIcon, FolderIcon } from '@/components/icons';
 import { useFolderContext } from './FolderTree';
 
 // Contexto para manejar la profundidad automáticamente
-const DepthContext = createContext(0);
+export const DepthContext = createContext(0);
 const PathContext = createContext('');
 const IndexContext = createContext(0);
 
