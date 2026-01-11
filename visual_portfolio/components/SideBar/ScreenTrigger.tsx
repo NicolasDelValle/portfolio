@@ -5,6 +5,7 @@ import { useTabContext } from '@/context/tabContext';
 import { DepthContext } from './Folder';
 import Image from 'next/image';
 import FileIcon from '../icons/FileIcon';
+import { extensionsToIcon } from '@/lib/const';
 
 interface ScreenTriggerProps {
   id: string;
@@ -25,11 +26,31 @@ export default function ScreenTrigger({ id, name, icon, screen, fileIcon }: Scre
     openTab({ id, name, icon, screen });
   };
 
-  const renderIcon = () => {
+  const renderIcon = (): ReactNode => {
     if (!icon && !fileIcon) return <FileIcon width={14} height={14} className="flex-shrink-0" />;
 
     if (fileIcon) {
-      return extensionsToIcon[fileIcon] || (
+      const iconValue = extensionsToIcon[fileIcon];
+      
+      if (iconValue) {
+        // Si es una función, invocarla
+        if (typeof iconValue === 'function') {
+          return iconValue();
+        }
+        // Si es un string, usarlo como src para Image
+        return (
+          <Image
+            src={iconValue}
+            alt=""
+            width={14}
+            height={14}
+            className="flex-shrink-0"
+          />
+        );
+      }
+      
+      // Fallback: usar fileIcon como src
+      return (
         <Image
           src={fileIcon}
           alt=""

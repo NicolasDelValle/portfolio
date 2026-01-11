@@ -3,7 +3,7 @@ import type { PortfolioData } from "@/types/portfolioTypes";
 import fallbackData from "@/public/data/portfolio.json";
 
 const PORTFOLIO_DATA_URL =
-  "https://gist.githubusercontent.com/NicolasDelValle/00ff1302aeebbe61c304a8d9253aa6b1/raw/portfolioData.jsons";
+  "https://gist.githubusercontent.com/NicolasDelValle/00ff1302aeebbe61c304a8d9253aa6b1/raw/portfolioData.json";
 
 export function usePortfolioData() {
   const [portfolioData, setPortfolioData] = useState<PortfolioData | null>(
