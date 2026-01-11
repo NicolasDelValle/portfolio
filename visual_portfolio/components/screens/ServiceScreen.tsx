@@ -2,6 +2,7 @@
 
 import { useI18n } from "@/hooks/useI18n";
 import { usePortfolioData } from "@/hooks/usePortfolioData";
+import Image from "next/image";
 
 interface ServiceScreenProps {
   serviceId: number;
@@ -22,7 +23,13 @@ export default function ServiceScreen({ serviceId }: ServiceScreenProps) {
       <div className="max-w-4xl mx-auto p-8 space-y-8">
         {/* Header */}
         <div className="space-y-4">
-          <div className="text-6xl">{service.icon}</div>
+          <Image
+            src={service.icon}
+            alt={service.title[language]}
+            width={92}
+            height={92}
+            className="object-contain"
+          />
           <h1 className="text-4xl font-bold text-primary">
             {service.title[language]}
           </h1>
@@ -60,6 +67,10 @@ export default function ServiceScreen({ serviceId }: ServiceScreenProps) {
         <div className="border-t border-border pt-6">
           <p className="text-sm text-muted-foreground text-center">
             {t('serviceScreen.footer')}
+            <a className="text-primary ms-1" href="mailto:contact@nicolasdelvalle.dev">
+            {t('serviceScreen.footer2')}
+
+            </a>
           </p>
         </div>
       </div>

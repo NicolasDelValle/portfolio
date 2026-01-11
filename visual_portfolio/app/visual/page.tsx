@@ -27,7 +27,16 @@ function VisualPageContent() {
             {activeScreen || (
               <div className="flex items-center justify-center h-full p-4">
                 <div className="max-w-md text-center space-y-4">
-                  <div className="text-6xl">�</div>
+
+                  <Image
+                    src="/nico-logo.svg"
+                    alt="Nico Logo"
+                    priority
+                    className='mx-auto mb-4 grayscale'
+                    width={256}
+                    height={256}
+                  />
+
                   <h1 className="text-2xl font-bold">{t('portfolio.noFileOpen')}</h1>
                   <p className="text-gray-600 dark:text-gray-400">
                     {t('portfolio.selectFileMessage')}

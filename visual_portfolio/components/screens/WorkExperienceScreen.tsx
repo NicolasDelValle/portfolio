@@ -2,6 +2,7 @@
 
 import { useI18n } from '@/hooks/useI18n';
 import { usePortfolioData } from '@/hooks/usePortfolioData';
+import { Award, CalendarDays, Dot, Tag, ToolCase } from 'lucide-react';
 
 interface WorkExperienceScreenProps {
   workId: number;
@@ -17,7 +18,8 @@ export default function WorkExperienceScreen({ workId }: WorkExperienceScreenPro
   if (!job) return null;
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const [year, month] = dateString.split('-');
+    const date = new Date(parseInt(year), parseInt(month) - 1, 1);
     return date.toLocaleDateString(language === 'es' ? 'es-ES' : 'en-US', {
       year: 'numeric',
       month: 'long',
@@ -29,13 +31,13 @@ export default function WorkExperienceScreen({ workId }: WorkExperienceScreenPro
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center gap-2 text-sm text-foreground-muted mb-4">
-          <span>💼</span>
+          <CalendarDays width={16} height={16} />
           <span className="text-primary font-semibold">
-            {formatDate(job.startDate)} - {job.current ? t('common.present') || 'Present' : formatDate(job.endDate!)}
+            {formatDate(job.startDate)} {job.current ? '' : ` - ${formatDate(job.endDate!)}`}
           </span>
           {job.current && (
             <span className="px-2 py-1 text-xs bg-green-500 bg-opacity-20 text-green-600 dark:text-green-400 rounded">
-              Current
+              {t('common.present')}
             </span>
           )}
         </div>
@@ -55,10 +57,10 @@ export default function WorkExperienceScreen({ workId }: WorkExperienceScreenPro
       {/* Description */}
       <section className="mb-8">
         <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-          <span>📝</span>
-          Description
+          <Tag width={24} height={24} />
+          {t('workExperienceScreen.description')}
         </h3>
-        <p className="text-foreground-muted leading-relaxed">
+        <p className="text-foreground-muted leading-relaxed ms-4">
           {job.description[language]}
         </p>
       </section>
@@ -67,13 +69,13 @@ export default function WorkExperienceScreen({ workId }: WorkExperienceScreenPro
       {job.highlights && job.highlights[language].length > 0 && (
         <section className="mb-8">
           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-            <span>🏆</span>
-            Key Achievements
+            <Award width={24} height={24} />
+            {t('workExperienceScreen.keyAchievements')}
           </h3>
-          <ul className="space-y-3">
+          <ul className="space-y-3 ms-4">
             {job.highlights[language].map((highlight, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <span className="text-green-500 mt-1 flex-shrink-0">✓</span>
+              <li key={index} className="flex items-start jus gap-3">
+                <span className="text-green-500 mt-1 flex-shrink-0"><Dot /></span>
                 <span className="text-foreground-muted">{highlight}</span>
               </li>
             ))}
@@ -84,10 +86,10 @@ export default function WorkExperienceScreen({ workId }: WorkExperienceScreenPro
       {/* Technologies */}
       <section className="mb-8">
         <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-          <span>🛠️</span>
-          Technologies & Tools
+          <ToolCase width={24} height={24} />
+          {t('workExperienceScreen.technologiesAndTools')}
         </h3>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 ms-4">
           {job.technologies.map((tech) => (
             <span
               key={tech}
@@ -102,7 +104,7 @@ export default function WorkExperienceScreen({ workId }: WorkExperienceScreenPro
       {/* Footer */}
       <div className="mt-12 pt-6 border-t border-border">
         <p className="text-xs text-foreground-muted text-center">
-          💡 This information is part of my professional experience
+          💡 {t('workExperienceScreen.footer')}
         </p>
       </div>
     </div>

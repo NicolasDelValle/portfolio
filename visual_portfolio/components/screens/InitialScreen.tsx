@@ -1,6 +1,7 @@
 'use client';
 
 import { useI18n } from "@/hooks/useI18n";
+import { TriangleAlert } from "lucide-react";
 import Link from "next/link";
 
 export default function InitialScreen() {
@@ -11,7 +12,7 @@ export default function InitialScreen() {
       <div className="max-w-4xl mx-auto p-8 space-y-8">
         {/* Mobile Warning */}
         <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 flex items-start gap-3">
-          <span className="text-2xl">⚠️</span>
+          <TriangleAlert className="text-warning" />
           <div className="flex-1">
             <p className="font-semibold text-yellow-600 dark:text-yellow-500">
               {t('initialScreen.mobileWarning.title')}
@@ -23,26 +24,28 @@ export default function InitialScreen() {
         </div>
 
         {/* HR/Non-Technical Users Notice */}
-        <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 space-y-3">
+        <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 flex flex-col gap-3">
           <div className="flex items-start gap-3">
-            <span className="text-2xl">💼</span>
+            <TriangleAlert className="text-warning" />
             <div className="flex-1">
-              <p className="font-semibold text-blue-600 dark:text-blue-500">
+              <p className="font-semibold text-yellow-600 dark:text-yellow-500">
                 {t('initialScreen.hrNotice.title')}
               </p>
-              <p className="text-sm text-blue-700 dark:text-blue-400 mt-1">
+              <p className="text-sm text-yellow-700 dark:text-yellow-400 mt-1">
                 {t('initialScreen.hrNotice.description')}
               </p>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+          <div className="flex flex-row gap-3 items-center">
+
             <Link
               href="/"
               className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors text-sm font-medium"
             >
               {t('initialScreen.hrNotice.button')}
             </Link>
-            <p className="text-xs text-blue-600 dark:text-blue-400">
+            
+            <p className="text-xs text-yellow-700 dark:text-yellow-400">
               {t('initialScreen.hrNotice.logoTip')}
             </p>
           </div>

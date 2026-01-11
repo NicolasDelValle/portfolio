@@ -18,7 +18,8 @@
     "pageNotFoundDescription": "La página que buscas no existe o ha sido movida.",
     "backToHome": "Volver al Inicio",
     "dataLoadError": "Error al Cargar Datos",
-    "dataLoadErrorDescription": "No se pudo cargar la información del portafolio. Inténtalo más tarde."
+    "dataLoadErrorDescription": "No se pudo cargar la información del portafolio. Inténtalo más tarde.",
+    "present": "Presente"
   },
   "navigation": {
     "dashboard": "Panel",
@@ -65,6 +66,90 @@
     "close": "Cerrar",
     "exit": "Salir"
   },
+  "menuBar": {
+    "edit": {
+      "title": "Editar",
+      "undo": "Deshacer",
+      "redo": "Rehacer",
+      "cut": "Cortar",
+      "copy": "Copiar",
+      "paste": "Pegar",
+      "find": "Buscar",
+      "replace": "Reemplazar"
+    },
+    "selection": {
+      "title": "Selección",
+      "selectAll": "Seleccionar Todo",
+      "expandSelection": "Expandir Selección",
+      "shrinkSelection": "Reducir Selección",
+      "copyLineUp": "Copiar Línea Arriba",
+      "copyLineDown": "Copiar Línea Abajo",
+      "moveLinesUp": "Mover Líneas Arriba",
+      "moveLinesDown": "Mover Líneas Abajo",
+      "addCursorAbove": "Agregar Cursor Arriba",
+      "addCursorBelow": "Agregar Cursor Abajo"
+    },
+    "view": {
+      "title": "Ver",
+      "commandPalette": "Paleta de Comandos",
+      "openView": "Abrir Vista",
+      "appearance": "Apariencia",
+      "editorLayout": "Diseño del Editor",
+      "explorer": "Explorador",
+      "search": "Buscar",
+      "sourceControl": "Control de Código",
+      "run": "Ejecutar y Depurar",
+      "extensions": "Extensiones",
+      "problems": "Problemas",
+      "output": "Salida",
+      "terminal": "Terminal"
+    },
+    "go": {
+      "title": "Ir",
+      "back": "Atrás",
+      "forward": "Adelante",
+      "goToFile": "Ir al Archivo",
+      "goToSymbol": "Ir al Símbolo",
+      "goToLine": "Ir a la Línea",
+      "switchEditor": "Cambiar Editor",
+      "nextProblem": "Siguiente Problema",
+      "previousProblem": "Problema Anterior"
+    },
+    "run": {
+      "title": "Ejecutar",
+      "startDebugging": "Iniciar Depuración",
+      "runWithoutDebugging": "Ejecutar sin Depurar",
+      "stopDebugging": "Detener Depuración",
+      "openConfigurations": "Abrir Configuraciones",
+      "addConfiguration": "Agregar Configuración",
+      "toggleBreakpoint": "Alternar Punto de Interrupción",
+      "stepOver": "Paso Sobre",
+      "stepInto": "Paso Dentro",
+      "stepOut": "Paso Fuera"
+    },
+    "terminal": {
+      "title": "Terminal",
+      "newTerminal": "Nueva Terminal",
+      "splitTerminal": "Dividir Terminal",
+      "runTask": "Ejecutar Tarea",
+      "runBuildTask": "Ejecutar Tarea de Compilación",
+      "runActiveFile": "Ejecutar Archivo Activo",
+      "clear": "Limpiar",
+      "kill": "Cerrar Terminal"
+    },
+    "help": {
+      "title": "Ayuda",
+      "welcome": "Bienvenida",
+      "documentation": "Documentación",
+      "showAllCommands": "Mostrar Todos los Comandos",
+      "keyboardShortcuts": "Atajos de Teclado",
+      "videoTutorials": "Tutoriales en Video",
+      "reportIssue": "Reportar Problema",
+      "viewLicense": "Ver Licencia",
+      "checkForUpdates": "Buscar Actualizaciones",
+      "about": "Acerca de"
+    }
+  },
   "screens": {
     "initial": "Que es esto.md",
     "about": "Sobre Mi.md",
@@ -86,7 +171,7 @@
     "hrNotice": {
       "title": "¿Eres de Recursos Humanos o prefieres un portfolio tradicional?",
       "description": "Si esta interfaz de desarrollador no es tu estilo, puedes ver mi portfolio en formato tradicional con toda la información de manera más convencional.",
-      "button": "← Ir al Portfolio Tradicional",
+      "button": "Ir al Portfolio Tradicional",
       "logoTip": "💡 También puedes hacer clic en el logo de la esquina superior izquierda para volver"
     },
     "whatIsThis": {
@@ -134,7 +219,8 @@
   "serviceScreen": {
     "description": "Descripción del Servicio",
     "features": "Características Incluidas",
-    "footer": "¿Interesado en este servicio? Contáctame para más información"
+    "footer": "¿Interesado en este servicio?",
+    "footer2": "Contáctame para más información"
   },
   "contactScreen": {
     "title": "Contacto",
@@ -144,6 +230,12 @@
     "location": "Ubicación",
     "social": "Redes Sociales",
     "footer": "Respondo a todos los mensajes en menos de 24 horas"
+  },
+  "workExperienceScreen": {
+    "description": "Descripción",
+    "keyAchievements": "Logros Clave",
+    "technologiesAndTools": "Tecnologías y Herramientas",
+    "footer": "Esta información es parte de mi experiencia profesional"
   },
   "sidebar": {
     "skills": "Habilidades",
@@ -161,6 +253,30 @@
     "english": "English",
     "spanish": "Español",
     "close": "Cerrar",
-    "exit": "Salir"
+    "exit": "Salir"  },
+  "iconBar": {
+    "chat": {
+      "tooltip": "Chat",
+      "startChat": "Iniciar Chat",
+      "openChatView": "Abrir Vista de Chat",
+      "chatHistory": "Historial de Chat",
+      "clearHistory": "Limpiar Historial",
+      "settings": "Configuración de Chat"
+    },
+    "account": {
+      "tooltip": "Cuenta",
+      "signIn": "Iniciar sesión para sincronizar configuración",
+      "backupSettings": "Copia de seguridad y sincronización",
+      "syncSettings": "Sincronización activada",
+      "accountSettings": "Configuración de cuenta"
+    },
+    "settings": {
+      "commandPalette": "Paleta de Comandos",
+      "settings": "Configuración",
+      "extensions": "Extensiones",
+      "keyboardShortcuts": "Atajos de Teclado",
+      "userSnippets": "Fragmentos de Usuario",
+      "checkForUpdates": "Buscar Actualizaciones"
+    }
   }
 }

@@ -110,7 +110,7 @@ export default function ResumeScreen() {
         </section>
       )}
 
-      {/* Education */}
+      {/* Education 
       {education && education.length > 0 && (
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
@@ -135,7 +135,7 @@ export default function ResumeScreen() {
             ))}
           </div>
         </section>
-      )}
+      )}*/}
 
       {/* Skills */}
       <section className="mb-8">
@@ -162,7 +162,7 @@ export default function ResumeScreen() {
         </div>
       </section>
 
-      {/* Certifications */}
+      {/* Certifications
       {certifications && certifications.length > 0 && (
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
@@ -182,10 +182,10 @@ export default function ResumeScreen() {
             ))}
           </div>
         </section>
-      )}
+      )} */}
 
       {/* Footer */}
-      <div className="mt-12 pt-6 border-t border-border">
+      <div className="mt-12 pt-6 border-t border-border mb-8">
         <p className="text-xs text-foreground-muted text-center">
           📄 Complete professional resume • Last updated: {new Date().toLocaleDateString(language === 'es' ? 'es-ES' : 'en-US', { year: 'numeric', month: 'long' })}
         </p>

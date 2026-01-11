@@ -18,7 +18,8 @@
     "pageNotFoundDescription": "The page you are looking for does not exist or has been moved.",
     "backToHome": "Back to Home",
     "dataLoadError": "Error Loading Data",
-    "dataLoadErrorDescription": "Could not load portfolio data. Please try again later."
+    "dataLoadErrorDescription": "Could not load portfolio data. Please try again later.",
+    "present": "Present"
   },
   "navigation": {
     "dashboard": "Dashboard",
@@ -65,6 +66,90 @@
     "close": "Close",
     "exit": "Exit"
   },
+  "menuBar": {
+    "edit": {
+      "title": "Edit",
+      "undo": "Undo",
+      "redo": "Redo",
+      "cut": "Cut",
+      "copy": "Copy",
+      "paste": "Paste",
+      "find": "Find",
+      "replace": "Replace"
+    },
+    "selection": {
+      "title": "Selection",
+      "selectAll": "Select All",
+      "expandSelection": "Expand Selection",
+      "shrinkSelection": "Shrink Selection",
+      "copyLineUp": "Copy Line Up",
+      "copyLineDown": "Copy Line Down",
+      "moveLinesUp": "Move Lines Up",
+      "moveLinesDown": "Move Lines Down",
+      "addCursorAbove": "Add Cursor Above",
+      "addCursorBelow": "Add Cursor Below"
+    },
+    "view": {
+      "title": "View",
+      "commandPalette": "Command Palette",
+      "openView": "Open View",
+      "appearance": "Appearance",
+      "editorLayout": "Editor Layout",
+      "explorer": "Explorer",
+      "search": "Search",
+      "sourceControl": "Source Control",
+      "run": "Run and Debug",
+      "extensions": "Extensions",
+      "problems": "Problems",
+      "output": "Output",
+      "terminal": "Terminal"
+    },
+    "go": {
+      "title": "Go",
+      "back": "Back",
+      "forward": "Forward",
+      "goToFile": "Go to File",
+      "goToSymbol": "Go to Symbol",
+      "goToLine": "Go to Line",
+      "switchEditor": "Switch Editor",
+      "nextProblem": "Next Problem",
+      "previousProblem": "Previous Problem"
+    },
+    "run": {
+      "title": "Run",
+      "startDebugging": "Start Debugging",
+      "runWithoutDebugging": "Run Without Debugging",
+      "stopDebugging": "Stop Debugging",
+      "openConfigurations": "Open Configurations",
+      "addConfiguration": "Add Configuration",
+      "toggleBreakpoint": "Toggle Breakpoint",
+      "stepOver": "Step Over",
+      "stepInto": "Step Into",
+      "stepOut": "Step Out"
+    },
+    "terminal": {
+      "title": "Terminal",
+      "newTerminal": "New Terminal",
+      "splitTerminal": "Split Terminal",
+      "runTask": "Run Task",
+      "runBuildTask": "Run Build Task",
+      "runActiveFile": "Run Active File",
+      "clear": "Clear",
+      "kill": "Kill Terminal"
+    },
+    "help": {
+      "title": "Help",
+      "welcome": "Welcome",
+      "documentation": "Documentation",
+      "showAllCommands": "Show All Commands",
+      "keyboardShortcuts": "Keyboard Shortcuts",
+      "videoTutorials": "Video Tutorials",
+      "reportIssue": "Report Issue",
+      "viewLicense": "View License",
+      "checkForUpdates": "Check for Updates",
+      "about": "About"
+    }
+  },
   "screens": {
     "initial": "What is this.md",
     "about": "About Me.md",
@@ -86,7 +171,7 @@
     "hrNotice": {
       "title": "Are you from HR or prefer a traditional portfolio?",
       "description": "If this developer interface is not your style, you can view my portfolio in traditional format with all the information in a more conventional way.",
-      "button": "← Go to Traditional Portfolio",
+      "button": "Go to Traditional Portfolio",
       "logoTip": "💡 You can also click the logo in the top left corner to go back"
     },
     "whatIsThis": {
@@ -134,7 +219,8 @@
   "serviceScreen": {
     "description": "Service Description",
     "features": "Included Features",
-    "footer": "Interested in this service? Contact me for more information"
+    "footer": "Interested in this service?",
+    "footer2":"Contact me for more information"
   },
   "contactScreen": {
     "title": "Contact",
@@ -144,6 +230,12 @@
     "location": "Location",
     "social": "Social Networks",
     "footer": "I respond to all messages within 24 hours"
+  },
+  "workExperienceScreen": {
+    "description": "Description",
+    "keyAchievements": "Key Achievements",
+    "technologiesAndTools": "Technologies & Tools",
+    "footer": "This information is part of my professional experience"
   },
   "sidebar": {
     "skills": "Skills",
@@ -161,6 +253,30 @@
     "english": "English",
     "spanish": "Español",
     "close": "Close",
-    "exit": "Exit"
+    "exit": "Exit"  },
+  "iconBar": {
+    "chat": {
+      "tooltip": "Chat",
+      "startChat": "Start Chat",
+      "openChatView": "Open Chat View",
+      "chatHistory": "Chat History",
+      "clearHistory": "Clear History",
+      "settings": "Chat Settings"
+    },
+    "account": {
+      "tooltip": "Account",
+      "signIn": "Sign in to Sync Settings",
+      "backupSettings": "Backup and Sync Settings",
+      "syncSettings": "Settings Sync is On",
+      "accountSettings": "Account Settings"
+    },
+    "settings": {
+      "commandPalette": "Command Palette",
+      "settings": "Settings",
+      "extensions": "Extensions",
+      "keyboardShortcuts": "Keyboard Shortcuts",
+      "userSnippets": "User Snippets",
+      "checkForUpdates": "Check for Updates"
+    }
   }
 }

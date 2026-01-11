@@ -1,21 +1,27 @@
 import Dropdown from '@/components/ui/Dropdown';
 import { useTheme } from '@/context/themeContext';
+import { useNavBar } from '@/context/navBarContext';
 import { useI18n } from '@/hooks/useI18n';
 import { Divider, IconButton, Tooltip } from '@mui/material';
 import { ChevronRight, Settings } from 'lucide-react';
 import { useState } from 'react'
 
-function Theme() {
+interface SubMenuProps {
+  activeSubMenu: string | null;
+  setActiveSubMenu: (menu: string | null) => void;
+}
+
+function Theme({ activeSubMenu, setActiveSubMenu }: SubMenuProps) {
   const { setDarkMode, setLightMode } = useTheme();
   const { t } = useI18n();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const isOpen = activeSubMenu === 'theme';
 
   return (
     <Dropdown
       isOpen={isOpen}
-      onClick={() => setIsOpen(true)}
-      onMouseEnter={() => setIsOpen(true)}
-      onClose={() => setIsOpen(false)}
+      onClick={() => setActiveSubMenu('theme')}
+      onMouseEnter={() => setActiveSubMenu('theme')}
+      onClose={() => setActiveSubMenu(null)}
       className="w-full text-left px-4 my-1 hover:bg-primary text-foreground dark:hover:text-foreground hover:text-hover transition-colors text-[13px] rounded-md flex flex-row justify-between items-center"
       config={{
         orientation: "left",
@@ -37,16 +43,16 @@ function Theme() {
   );
 }
 
-function Language() {
+function Language({ activeSubMenu, setActiveSubMenu }: SubMenuProps) {
   const { setLanguage, t } = useI18n();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const isOpen = activeSubMenu === 'language';
 
   return (
     <Dropdown
       isOpen={isOpen}
-      onClick={() => setIsOpen(true)}
-      onMouseEnter={() => setIsOpen(true)}
-      onClose={() => setIsOpen(false)}
+      onClick={() => setActiveSubMenu('language')}
+      onMouseEnter={() => setActiveSubMenu('language')}
+      onClose={() => setActiveSubMenu(null)}
       className="w-full text-left px-4 my-1 hover:bg-primary text-foreground dark:hover:text-foreground hover:text-hover transition-colors text-[13px] rounded-md flex flex-row justify-between items-center"
       config={{
         orientation: "left",
@@ -70,15 +76,33 @@ function Language() {
 
 function GearIcon() {
   const { t } = useI18n();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { isMenuOpen, activeItem, setActiveItem, toggleMenu } = useNavBar();
+  const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+  const iconName = 'settings';
+  const isOpen = activeItem === iconName && isMenuOpen;
+
+  const handleClick = () => {
+    if (isMenuOpen && activeItem === iconName) {
+      toggleMenu();
+      setActiveSubMenu(null);
+    } else {
+      setActiveItem(iconName);
+      if (!isMenuOpen) toggleMenu();
+    }
+  };
+
+  const handleClose = () => {
+    toggleMenu();
+    setActiveSubMenu(null);
+  };
 
   return (
 
     <Dropdown
       isOpen={isOpen}
-      onClick={() => setIsOpen(true)}
-      onClose={() => setIsOpen(false)}
-      onClickOverlay={() => setIsOpen(false)}
+      onClick={handleClick}
+      onClose={handleClose}
+      onClickOverlay={handleClose}
       config={{
         orientation: "bottom",
         position: "end"
@@ -116,14 +140,17 @@ function GearIcon() {
         </Tooltip>
       }
       items={[
-        t('settings.commandPalette'),
+        t('iconBar.settings.commandPalette'),
+        t('iconBar.settings.settings'),
+        t('iconBar.settings.extensions'),
         <Divider className="bg-border" key={Math.random()} />,
-        t('settings.newFile'),
-        <Theme key={Math.random()} />,
-        <Language key={Math.random()} />,
+        t('iconBar.settings.keyboardShortcuts'),
+        t('iconBar.settings.userSnippets'),
         <Divider className="bg-border" key={Math.random()} />,
-        t('settings.close'),
-        t('settings.exit')
+        <Theme key={Math.random()} activeSubMenu={activeSubMenu} setActiveSubMenu={setActiveSubMenu} />,
+        <Language key={Math.random()} activeSubMenu={activeSubMenu} setActiveSubMenu={setActiveSubMenu} />,
+        <Divider className="bg-border" key={Math.random()} />,
+        t('iconBar.settings.checkForUpdates'),
       ]}
     />
 

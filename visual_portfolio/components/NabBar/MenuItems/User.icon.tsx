@@ -1,58 +1,38 @@
 import Dropdown from '@/components/ui/Dropdown';
-import { useTheme } from '@/context/themeContext';
+import { useNavBar } from '@/context/navBarContext';
+import { useI18n } from '@/hooks/useI18n';
 import { Divider, IconButton, Tooltip } from '@mui/material';
-import { ChevronRight, CircleUserRound } from 'lucide-react';
-import { useState } from 'react'
-
-function Theme() {
-  const { setDarkMode, setLightMode } = useTheme();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  return (
-    <Dropdown
-      isOpen={isOpen}
-      onClick={() => setIsOpen(true)}
-      onMouseEnter={() => setIsOpen(true)}
-      onClose={() => setIsOpen(false)}
-      className="w-full text-left px-4 my-1 hover:bg-primary text-foreground dark:hover:text-foreground hover:text-hover transition-colors text-[13px] rounded-md flex flex-row justify-between items-center"
-      config={{
-        orientation: "left",
-        position: "start"
-      }}
-      trigger={
-        <button>
-          <span>
-            Theme
-          </span>
-          <ChevronRight className='opacity-50' width={16} height={16} />
-        </button>
-      }
-      items={[
-        { name: "Light", action: setLightMode },
-        { name: "Dark", action: setDarkMode },
-      ]}
-    />
-  );
-}
+import { CircleUserRound } from 'lucide-react';
 
 function UserIcon() {
+  const { t } = useI18n();
+  const { isMenuOpen, activeItem, setActiveItem, toggleMenu } = useNavBar();
+  const iconName = 'user';
+  const isOpen = activeItem === iconName && isMenuOpen;
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const handleClick = () => {
+    if (isMenuOpen && activeItem === iconName) {
+      toggleMenu();
+    } else {
+      setActiveItem(iconName);
+      if (!isMenuOpen) toggleMenu();
+    }
+  };
 
   return (
 
     <Dropdown
       isOpen={isOpen}
-      onClick={() => setIsOpen(true)}
-      onClose={() => setIsOpen(false)}
-      onClickOverlay={() => setIsOpen(false)}
+      onClick={handleClick}
+      onClose={toggleMenu}
+      onClickOverlay={toggleMenu}
       config={{
         orientation: "bottom",
         position: "end"
       }}
       trigger={
         <Tooltip
-          title="Manage"
+          title={t('iconBar.account.tooltip')}
           disableInteractive={isOpen}
           arrow
           className='shadow-2xl'
@@ -77,19 +57,18 @@ function UserIcon() {
             }
           }}
         >
-          <IconButton aria-label="delete" size="small" >
+          <IconButton aria-label="account" size="small" >
             <CircleUserRound size={16} className="text-foreground hover:opacity-80 transition-all" />
           </IconButton>
         </Tooltip>
       }
       items={[
-        "Command Palette",
+        t('iconBar.account.signIn'),
         <Divider className="bg-border" key={Math.random()} />,
-        "New File",
-        <Theme key={Math.random()} />,
+        t('iconBar.account.backupSettings'),
+        t('iconBar.account.syncSettings'),
         <Divider className="bg-border" key={Math.random()} />,
-        "Close",
-        "Exit"
+        t('iconBar.account.accountSettings'),
       ]}
     />
 

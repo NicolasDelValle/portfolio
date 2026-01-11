@@ -222,8 +222,8 @@
     },
     {
       "id": 2,
-      "icon": "./icons/services/art.svg",
-      "visualIcon": "./icons/services/art.svg",
+      "icon": "./icons/services/art.png",
+      "visualIcon": "./icons/services/art.png",
       "title": {
         "en": "UI/UX Design",
         "es": "Diseño UI/UX"
@@ -364,22 +364,24 @@
       "current": true,
       "location": "Remote",
       "description": {
-        "en": "Fullstack development from project start with focus on architecture definition, technology selection, and scalable solution delivery. Applied clean architecture and design patterns consistently while improving development workflows and team collaboration.",
-        "es": "Desarrollo fullstack desde el inicio del proyecto con enfoque en definición de arquitectura, selección de tecnologías y entrega de soluciones escalables. Apliqué arquitectura limpia y patrones de diseño de manera consistente mientras mejoraba los flujos de desarrollo y colaboración del equipo."
+        "en": "Fullstack development from project start with focus on project analysis, architecture definition, and technology selection. Built frontend and backend features applying clean architecture and design patterns consistently while improving development workflows and team collaboration in agile environments.",
+        "es": "Desarrollo fullstack desde el inicio del proyecto con enfoque en análisis de proyecto, definición de arquitectura y selección de tecnologías. Construí características frontend y backend aplicando arquitectura limpia y patrones de diseño de manera consistente mientras mejoraba los flujos de desarrollo y colaboración del equipo en entornos ágiles."
       },
       "highlights": {
         "en": [
-          "Enhanced fullstack development with modern frontend and enterprise backend technologies",
-          "Applied clean architecture, design patterns, and dependency injection consistently",
-          "Delivered scalable, maintainable, and high-performance solutions",
+          "Built frontend and backend features with focus on performance and scalability",
+          "Applied clean architecture, layered design, and design patterns (Repository, Factory, Singleton, Dependency Injection)",
+          "Analyzed new features and suggested scalable improvements",
+          "Delivered maintainable and high-performance solutions with modern frontend and enterprise backend tech",
           "Optimized API development and frontend-backend integration",
           "Improved Git practices and development workflows in agile teams",
           "Strengthened communication, problem-solving, and decision-making skills"
         ],
         "es": [
-          "Mejoré desarrollo fullstack con tecnologías frontend modernas y backend empresarial",
-          "Apliqué arquitectura limpia, patrones de diseño e inyección de dependencias consistentemente",
-          "Entregué soluciones escalables, mantenibles y de alto rendimiento",
+          "Construí características frontend y backend con enfoque en rendimiento y escalabilidad",
+          "Apliqué arquitectura limpia, diseño por capas y patrones de diseño (Repository, Factory, Singleton, Inyección de Dependencias)",
+          "Analicé nuevas características y sugerí mejoras escalables",
+          "Entregué soluciones mantenibles y de alto rendimiento con tecnologías frontend modernas y backend empresarial",
           "Optimicé desarrollo de APIs e integración frontend-backend",
           "Mejoré prácticas de Git y flujos de desarrollo en equipos ágiles",
           "Fortalecí habilidades de comunicación, resolución de problemas y toma de decisiones"
@@ -406,27 +408,54 @@
         "en": "Full Stack Developer",
         "es": "Desarrollador Full Stack"
       },
-      "startDate": "2020-03-01",
-      "endDate": "2021-12-31",
+      "startDate": "2022-05-01",
+      "endDate": "2024-12-31",
       "current": false,
       "location": "Montevideo, Uruguay",
       "description": {
-        "en": "Developed custom web solutions for various clients, from e-commerce platforms to corporate websites.",
-        "es": "Desarrollé soluciones web personalizadas para varios clientes, desde plataformas de e-commerce hasta sitios corporativos."
+        "en": "Fullstack development on multiple projects from initial concept to deployment and maintenance. Implemented complex features for web and mobile applications while working in agile teams. Led development on key projects including GestionPost (last-mile logistics), Listala (internal platform), and Carlos Patrón (client logistics with 3D visualization).",
+        "es": "Desarrollo fullstack en múltiples proyectos desde el concepto inicial hasta el despliegue y mantenimiento. Implementé características complejas para aplicaciones web y móviles trabajando en equipos ágiles. Lideré desarrollo en proyectos clave incluyendo GestionPost (logística de última milla), Listala (plataforma interna) y Carlos Patrón (logística de cliente con visualización 3D)."
       },
       "highlights": {
         "en": [
-          "Built 15+ client projects from concept to deployment",
-          "Improved client satisfaction score to 95%",
-          "Implemented responsive designs across all projects"
+          "Developed GestionPost: Last-mile logistics system with React Native, Node.js, PostgreSQL, deployed to Android/iOS",
+          "Built Listala: Internal web platform with Vue.js, Node.js, MongoDB, Dockerized and deployed in AWS",
+          "Created Carlos Patrón: Complex quotation system with 3D load visualization using React, Three.js, Apollo GraphQL",
+          "Applied MVC architecture, clean code practices, and agile methodologies (Scrum)",
+          "Managed version control with Git and Bitbucket in collaborative environments",
+          "Deployed web and mobile apps using Docker, AWS, Android Studio, Xcode, and AppCenter",
+          "Strengthened technical leadership, communication, and soft skills in agile teams"
         ],
         "es": [
-          "Construí más de 15 proyectos de clientes hasta despliegue",
-          "Mejoré la satisfacción del cliente al 95%",
-          "Implementé diseños responsivos en todos los proyectos"
+          "Desarrollé GestionPost: Sistema de logística de última milla con React Native, Node.js, PostgreSQL, desplegado en Android/iOS",
+          "Construí Listala: Plataforma web interna con Vue.js, Node.js, MongoDB, Dockerizada y desplegada en AWS",
+          "Creé Carlos Patrón: Sistema de cotización complejo con visualización 3D de cargas usando React, Three.js, Apollo GraphQL",
+          "Apliqué arquitectura MVC, prácticas de código limpio y metodologías ágiles (Scrum)",
+          "Gestioné control de versiones con Git y Bitbucket en entornos colaborativos",
+          "Desplegué aplicaciones web y móviles usando Docker, AWS, Android Studio, Xcode y AppCenter",
+          "Fortalecí liderazgo técnico, comunicación y habilidades blandas en equipos ágiles"
         ]
       },
-      "technologies": ["React", "Vue.js", "Express", "MongoDB", "Tailwind CSS"]
+      "technologies": [
+        "React",
+        "React Native",
+        "Vue.js",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "MongoDB",
+        "Sequelize",
+        "Mongoose",
+        "Apollo GraphQL",
+        "Three.js",
+        "Styled Components",
+        "Docker",
+        "AWS",
+        "Git",
+        "Bitbucket",
+        "Android Studio",
+        "Xcode"
+      ]
     }
   ],
   "education": [

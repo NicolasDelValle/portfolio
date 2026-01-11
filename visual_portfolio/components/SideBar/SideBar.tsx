@@ -124,7 +124,7 @@ function SideBar() {
             />
           </Folder>
 
-          {/* Code Snippets Folder */}
+          {/* Code Snippets Folder 
           {codeSnippets && codeSnippets.length > 0 && (
             <Folder name="💻 Code Snippets" defaultOpen={false}>
               {codeSnippets.map((snippet) => (
@@ -137,9 +137,9 @@ function SideBar() {
                 />
               ))}
             </Folder>
-          )}
+          )}*/}
 
-          {/* Projects Folder */}
+          {/* Projects Folder 
           {projects && projects.length > 0 && (
             <Folder name={t('sidebar.projects')}>
               {projects.map((project) => (
@@ -152,7 +152,7 @@ function SideBar() {
                 />
               ))}
             </Folder>
-          )}
+          )}*/}
 
           {/* Services Folder */}
           {services && services.length > 0 && (
