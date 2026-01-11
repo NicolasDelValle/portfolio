@@ -96,7 +96,6 @@ export default function Home() {
         <Hero
           name={basics.name}
           label={basics.label}
-          image={basics.image}
           summary={basics.summary}
         />
 

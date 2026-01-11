@@ -9,14 +9,10 @@ import ScreenTrigger from './ScreenTrigger';
 import Folder from './Folder';
 import { FolderTree } from './FolderTree';
 import InitialScreen from '@/components/screens/InitialScreen';
-import AboutScreen from '@/components/screens/AboutScreen';
 import SkillScreen from '@/components/screens/SkillScreen';
-import ProjectScreen from '@/components/screens/ProjectScreen';
 import ServiceScreen from '@/components/screens/ServiceScreen';
 import ContactScreen from '@/components/screens/ContactScreen';
 import WorkExperienceScreen from '@/components/screens/WorkExperienceScreen';
-import EducationScreen from '@/components/screens/EducationScreen';
-import CodeSnippetScreen from '@/components/screens/CodeSnippetScreen';
 import ResumeScreen from '@/components/screens/ResumeScreen';
 
 function SideBar() {
@@ -26,7 +22,7 @@ function SideBar() {
 
   if (!portfolioData) return null;
 
-  const { basics, projects, services, work, education, codeSnippets, certifications } = portfolioData;
+  const { services, work } = portfolioData;
 
   return (
     <Resizable

@@ -9,11 +9,10 @@ import Card3D from '../ui/Card3D';
 interface HeroProps {
   name: string;
   label: string;
-  image: string;
   summary: MultilingualText;
 }
 
-export default function Hero({ name, label, image, summary }: HeroProps) {
+export default function Hero({ name, label, summary }: HeroProps) {
   const { language, t } = useI18n();
 
   return (
@@ -32,8 +31,10 @@ export default function Hero({ name, label, image, summary }: HeroProps) {
                     src='/Nicolas Del Valle.png'
                     alt={name}
                     fill
+                    sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, 256px"
                     className="object-cover"
                     priority
+                    fetchPriority="high"
                   />
                 </div>
               </div>

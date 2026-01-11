@@ -7,7 +7,6 @@ interface CodeEditorComponentProps {
   code: string;
   language?: string;
   readOnly?: boolean;
-  showLineNumbers?: boolean;
   minHeight?: number;
   onChange?: (code: string) => void;
 }
@@ -16,7 +15,6 @@ export default function CodeEditorComponent({
   code,
   language = 'typescript',
   readOnly = true,
-  showLineNumbers = true,
   minHeight = 200,
   onChange,
 }: CodeEditorComponentProps) {

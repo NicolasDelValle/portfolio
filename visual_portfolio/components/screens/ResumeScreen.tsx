@@ -9,7 +9,7 @@ export default function ResumeScreen() {
 
   if (!portfolioData) return null;
 
-  const { basics, work, education, certifications } = portfolioData;
+  const { basics, work } = portfolioData;
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);

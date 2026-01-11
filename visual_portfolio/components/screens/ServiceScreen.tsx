@@ -26,8 +26,9 @@ export default function ServiceScreen({ serviceId }: ServiceScreenProps) {
           <Image
             src={service.icon}
             alt={service.title[language]}
-            width={92}
-            height={92}
+            width={64}
+            height={64}
+            sizes="64px"
             className="object-contain"
           />
           <h1 className="text-4xl font-bold text-primary">
