@@ -53,7 +53,14 @@
     "services": "Servicios",
     "servicesDescription": "Soluciones profesionales adaptadas a tus necesidades",
     "noFileOpen": "Ningún archivo está abierto",
-    "selectFileMessage": "Por favor selecciona un archivo desde la barra lateral para ver su contenido."
+    "selectFileMessage": "Por favor selecciona un archivo desde la barra lateral para ver su contenido.",
+    "mobileWarning": {
+      "title": "Experiencia de Escritorio",
+      "message": "Esta experiencia está diseñada para dispositivos de escritorio y puede no funcionar correctamente en dispositivos móviles.",
+      "suggestion": "Te recomendamos visitar nuestro portfolio tradicional optimizado para dispositivos móviles.",
+      "goToTraditional": "Ir al Portfolio Tradicional",
+      "continueAnyway": "Continuar de Todos Modos"
+    }
   },
   "fileMenu": {
     "file": "Archivo",

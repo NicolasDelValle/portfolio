@@ -6,10 +6,12 @@ import TabBar from "@/components/TabBar/TabBar";
 import InitialScreen from "@/components/screens/InitialScreen";
 import { useI18n } from "@/hooks/useI18n";
 import { usePortfolioData } from "@/hooks/usePortfolioData";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { TabProvider, useTabContext } from "@/context/tabContext";
 import Image from "next/image";
 import { CircularProgress } from "@mui/material";
+import MobileWarningModal from "@/components/MobileWarningModal";
+import { useIsMobile } from "@/lib/deviceDetection";
 
 function VisualPageContent() {
   const { t } = useI18n();
@@ -91,6 +93,9 @@ function VisualPageWrapper() {
 }
 
 export default function VisualPage() {
+  const isMobile = useIsMobile();
+  const [showMobileWarning, setShowMobileWarning] = useState(false);
+
   useEffect(() => {
     // Desactivar los efectos de fondo en esta página
     document.body.classList.add('no-background-effects');
@@ -101,5 +106,20 @@ export default function VisualPage() {
     };
   }, []);
 
-  return <VisualPageWrapper />;
+  useEffect(() => {
+    // Mostrar el modal si es dispositivo móvil
+    if (isMobile) {
+      setShowMobileWarning(true);
+    }
+  }, [isMobile]);
+
+  return (
+    <>
+      <MobileWarningModal 
+        isOpen={true} 
+        onClose={() => setShowMobileWarning(false)} 
+      />
+      <VisualPageWrapper />
+    </>
+  );
 }

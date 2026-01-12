@@ -53,7 +53,14 @@
     "services": "Services",
     "servicesDescription": "Professional solutions tailored to your needs",
     "noFileOpen": "No file is open",
-    "selectFileMessage": "Please select a file from the sidebar to view its content."
+    "selectFileMessage": "Please select a file from the sidebar to view its content.",
+    "mobileWarning": {
+      "title": "Desktop Experience",
+      "message": "This experience is designed for desktop devices and may not work properly on mobile devices.",
+      "suggestion": "We recommend visiting our traditional portfolio optimized for mobile devices.",
+      "goToTraditional": "Go to Traditional Portfolio",
+      "continueAnyway": "Continue Anyway"
+    }
   },
   "fileMenu": {
     "file": "File",
