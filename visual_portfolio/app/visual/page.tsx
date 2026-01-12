@@ -116,7 +116,7 @@ export default function VisualPage() {
   return (
     <>
       <MobileWarningModal 
-        isOpen={true} 
+        isOpen={showMobileWarning} 
         onClose={() => setShowMobileWarning(false)} 
       />
       <VisualPageWrapper />
