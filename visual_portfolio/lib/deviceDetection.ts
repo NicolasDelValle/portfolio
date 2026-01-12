@@ -1,3 +1,7 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
 /**
  * Detecta si el usuario está usando un dispositivo móvil
  * @returns true si es un dispositivo móvil, false si es desktop
@@ -5,7 +9,7 @@
 export const isMobileDevice = (): boolean => {
   if (typeof window === 'undefined') return false;
 
-  const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+  const userAgent = navigator.userAgent || navigator.vendor || (window as Window & { opera?: string }).opera || '';
 
   // Detectar dispositivos móviles por user agent
   const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
@@ -23,11 +27,9 @@ export const isMobileDevice = (): boolean => {
  * Hook personalizado para detectar dispositivos móviles con actualizaciones en resize
  */
 export const useIsMobile = (): boolean => {
-  if (typeof window === 'undefined') return false;
-  
-  const [isMobile, setIsMobile] = React.useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const checkMobile = () => {
       setIsMobile(isMobileDevice());
     };
@@ -42,6 +44,3 @@ export const useIsMobile = (): boolean => {
 
   return isMobile;
 };
-
-// Necesitamos importar React para el hook
-import React from 'react';
